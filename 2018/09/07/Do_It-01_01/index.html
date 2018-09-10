@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Do it! 01-1. 처음 만나는 자바스크립트 | Eunoia Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Do_It,javascript" />
+    
+    <meta name="description" content="01. 자바스크립트 시작하기1. 프런트엔드 개발 이해하기  자바스크립트 Front-End 개발 언어 정적인 웹 문서에 동작 부여   현업에서의 프로젝트 개발 순서 개발 의뢰 &amp;gt; 기획안 작성 &amp;gt; UI 시안 &amp;gt; Front-End &amp;gt; Back-End 1단계 : 고객(Client)   사이트 개발 의뢰   2단계 : 개발사         기획">
+<meta name="keywords" content="Do_It,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Do it! 01-1. 처음 만나는 자바스크립트">
+<meta property="og:url" content="http://nayoungkim0918.github.io/2018/09/07/Do_It-01_01/index.html">
+<meta property="og:site_name" content="Eunoia Blog">
+<meta property="og:description" content="01. 자바스크립트 시작하기1. 프런트엔드 개발 이해하기  자바스크립트 Front-End 개발 언어 정적인 웹 문서에 동작 부여   현업에서의 프로젝트 개발 순서 개발 의뢰 &amp;gt; 기획안 작성 &amp;gt; UI 시안 &amp;gt; Front-End &amp;gt; Back-End 1단계 : 고객(Client)   사이트 개발 의뢰   2단계 : 개발사         기획">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2018-09-10T19:36:20.879Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Do it! 01-1. 처음 만나는 자바스크립트">
+<meta name="twitter:description" content="01. 자바스크립트 시작하기1. 프런트엔드 개발 이해하기  자바스크립트 Front-End 개발 언어 정적인 웹 문서에 동작 부여   현업에서의 프로젝트 개발 순서 개발 의뢰 &amp;gt; 기획안 작성 &amp;gt; UI 시안 &amp;gt; Front-End &amp;gt; Back-End 1단계 : 고객(Client)   사이트 개발 의뢰   2단계 : 개발사         기획">
+    
+
+    
+        <link rel="alternate" href="/" title="Eunoia Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Study &amp; Programming for Web Programer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">eunoia♥</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/categories/index.html">카테고리</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/tags/index.html">태그</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    미지정
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Do_It-01_01" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Do it! 01-1. 처음 만나는 자바스크립트
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/09/07/Do_It-01_01/" class="article-date">
+            <time datetime="2018-09-07T02:20:00.000Z" itemprop="datePublished">2018-09-07</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Do-It/">Do_It</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="01-자바스크립트-시작하기"><a href="#01-자바스크립트-시작하기" class="headerlink" title="01. 자바스크립트 시작하기"></a>01. 자바스크립트 시작하기</h2><p><strong>1. 프런트엔드 개발 이해하기</strong></p>
+<ul>
+<li><strong>자바스크립트</strong><ul>
+<li>Front-End 개발 언어</li>
+<li>정적인 웹 문서에 동작 부여</li>
+</ul>
+</li>
+<li><strong>현업에서의 프로젝트 개발 순서</strong><ul>
+<li>개발 의뢰 &gt; 기획안 작성 &gt; UI 시안 &gt; Front-End &gt; Back-End<ul>
+<li>1단계 : 고객(Client)  <ul>
+<li>사이트 개발 의뢰</li>
+</ul>
+</li>
+<li>2단계 : 개발사        <ul>
+<li>기획안 작성(고객 요구 커스터마이징)</li>
+</ul>
+</li>
+<li>3단계 : 디자이너      <ul>
+<li>기획안을 토대로 UI(User Interface) 디자인</li>
+</ul>
+</li>
+<li>4단계 : 퍼블리셔<br>= 디자인 이미지파일을 이용해 HTML문서 작성, CSS를 이용해 정적인 웹 문서 완성<ul>
+<li>HTML : Hyper Text Markup Language</li>
+<li>정적인 웹 문서 : 사용자(사이트 방문자)가 어떤 동작을 해도 작동하지 않는 문서</li>
+</ul>
+</li>
+<li>5단계 : 백엔드 개발자  <ul>
+<li>HTML문서에 서버 언어(ASP, PHP, JSP 등)를 사용해 보이지 않는 영역 개발 </li>
+<li>보이지 않는 영역 : 사용자 입력 데이터를 DB에 저장하거나 검사</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><br><br><strong>2. 자바스크립트의 이해</strong></p>
+<ul>
+<li><strong>자바스크립트의 탄생 배경</strong><ul>
+<li>최초의 자바스크립트<ul>
+<li>회사명  : 넷스케이프(1995년 인터넷 브라우저 최고 점유율. 내비게이터_Navigater)</li>
+<li>개발자  : 브렌든 아이크(Brendan Eich, 1961 ~)</li>
+<li>개발명  : 모카(Mocha)</li>
+</ul>
+</li>
+<li>첫번째 이름 변경<ul>
+<li>라이브스크립트(LiveScript)</li>
+</ul>
+</li>
+<li>두번쨰 이름 변경<ul>
+<li>합병 : 넷스케이프 + 썬마이크로 시스템즈(Sun Microsystems, 현재 오라클과 합병, JAVA로 유명)</li>
+<li>자바스크립트(javascript)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>지켜지지 않은 언어의 표준화</strong><ul>
+<li>원인 : 여러 개발 회사가 각자 다른 이름으로 스크립트 언어 개발<ul>
+<li>마이크로소프트(Microsoft) : JScript + IE 3.0</li>
+<li>때문에 IE 8 이하, 크롬, 사파리, 파이어폭스 등에서는 자바스크립트가 호환되지 않음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>자바스크립트의 표준화</strong><ul>
+<li>넷스케이프의 표준화 요청<ul>
+<li>국제 정보통시표준화기구(ECMA, European Computer Manufacture Association)</li>
+<li>1996년 11월 : ECMA-262 표준 명세 제작</li>
+<li>1997년 7월  : ECMA 1 버전 완성</li>
+<li>ES1(ECMA-262 1st edition)</li>
+<li>ES6(ECMA-262 6th edition) : 현재 사용 중</li>
+<li>일부 브라우저는 ES5의 기능만 지원 : ES6를 사용한다면 브라우저 지원 여부 체크 필수</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>자바스크립트로 할 수 있는 것</strong></p>
+<ul>
+<li>과거 <ul>
+<li>사용자(Client) 컴퓨터에서만 동작하는 언어</li>
+<li>HTML5 내장 API의 언어 : API 사용에 필수<ul>
+<li>내장 API : Geolocation, Canvas, Drag&amp;Drop 등</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>현재 : 서버(Server)에서도 작동, 다양한 UI 개발에 사용</p>
+<ul>
+<li>자바스크립트로 제작한 라이브러리 등장<ul>
+<li>라이브러리 : 제이쿼리(Jquery), 앵귤러(Angular)JS, 리액트(React)JS, 노드(Node)Js, 폰갭(PhoneGap)</li>
+</ul>
+</li>
+<li>UI 개발<ul>
+<li>사이트, 모바일 웹, 스마트TV</li>
+</ul>
+</li>
+</ul>
+<p><br><br><hr><br>우선 러프하게 책 내용을 정리해봤다.<br>내용을 좀 더 수정하고, 이미지도 추가할 생각이다.<br><br>첫 장을 읽으면서 느낀 점은, 정말 기본에 충실한 책인 것 같다는 점이다.<br>자바스크립트가 무엇인지 알려주기 위해서<br>프로젝트 개발 순서, 프런트엔드의 개념, 웹페이지가 동작하는 기본 원리까지 설명하는 점이 참 좋았다.<br><br>이미 알고 있던 내용이 대부분이긴 하지만, 시작이 이렇다면 아직 미숙한 뒷부분도 손쉽게 이해할 수 있을 것 같다:D<br><br><hr><br>다음장 : 개발환경 준비하기<br><br>Chrome, Visual Studio Code 설치 및 자바스크립트 맛보기</p>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://nayoungkim0918.github.io/2018/09/07/Do_It-01_01/" data-id="cjlwlwyro0000iov781m7c2pt" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>팔로우:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/nayoungkim0918" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/09/11/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">after</strong>
+        <p class="article-nav-title">
+        
+            Hello World
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/09/07/Do_It_js_jq-start/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">before</strong>
+        <p class="article-nav-title">Do it! 자바스크립트+제이쿼리 입문</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/09/11/Do_It-01_02/" class="title">Do it! 01-2. 개발 환경 준비하기</a></p>
+                            <p class="item-date"><time datetime="2018-09-10T18:21:00.000Z" itemprop="datePublished">2018-09-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/09/11/post-theme-hueman/" class="title">Hueman 테마를 적용하다</a></p>
+                            <p class="item-date"><time datetime="2018-09-10T17:51:00.000Z" itemprop="datePublished">2018-09-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/09/11/test-draft/" class="title">test_draft</a></p>
+                            <p class="item-date"><time datetime="2018-09-10T16:28:18.000Z" itemprop="datePublished">2018-09-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/09/11/test-post/" class="title">test_post</a></p>
+                            <p class="item-date"><time datetime="2018-09-10T16:25:53.000Z" itemprop="datePublished">2018-09-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/09/11/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2018-09-10T16:24:14.093Z" itemprop="datePublished">2018-09-11</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">리스트</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">8</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DRAFT/" style="font-size: 10px;">DRAFT</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 15px;">Do_It</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/TEST/" style="font-size: 10px;">TEST</a> <a href="/tags/Tool/" style="font-size: 10px;">Tool</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 15px;">start</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/블로그/" style="font-size: 10px;">블로그</a> <a href="/tags/스터디/" style="font-size: 10px;">스터디</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 10px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/출판/" style="font-size: 10px;">출판</a> <a href="/tags/프로그래밍/" style="font-size: 10px;">프로그래밍</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">링크</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://google.com">Google</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://naver.com">Naver</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Nayoung kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://nayoungkim0918.github.io/2018/09/07/Do_It-01_01/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
