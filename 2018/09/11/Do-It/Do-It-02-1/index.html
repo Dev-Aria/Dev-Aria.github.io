@@ -251,17 +251,49 @@
 </li>
 <li><p><strong>내부 스크립트 분리하기</strong><br>① JS 파일 생성    </p>
 <figure class="highlight html"><figcaption><span>js/02_1_example.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.write("환영합니다");</span><br></pre></td></tr></table></figure>
-<p>② 새 html 파일 생성 후 JS 파일 연동           </p>
-<figure class="highlight html"><figcaption><span>02_1_import_test.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"ko"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>외부 자바스크립트 연동<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/02_1_example.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>② 새 html 파일 생성 후 JS 파일 연동<br><code>`</code>html 02_1_import_test.html<br>  &lt;!DOCTYPE html&gt;<br>  <html lang="ko"><br>  <head></head></html></p>
+<pre><code>&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;외부 자바스크립트 연동&lt;/title&gt;
+&lt;script src=&quot;js/02_1_example.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>  <br>  <body><br>  </body><br>  <br><code>`</code><br><br>  </p>
+<h4 id="4-코드-입력-시-주의사항"><a href="#4-코드-입력-시-주의사항" class="headerlink" title="4. 코드 입력 시 주의사항"></a>4. 코드 입력 시 주의사항</h4></li>
+</ul>
 </li>
+<li><strong>대/소문자 구분하기</strong><ul>
+<li>날짜 객체 생성 : New date() : (X)</li>
+<li>날짜 객체 생성 : new Date() : (O)</li>
+</ul>
+</li>
+<li><strong>코드 한 줄의 끝에는 반드시 세미콜론(;)</strong><ul>
+<li>마침표 역할</li>
+<li>한 줄에 여러 개의 코드를 작성가능</li>
+<li>document.write(“hi”) document.write(“bye”) : (X)</li>
+<li>document.write(“hi”); document.write(“bye”); : (O)</li>
+<li>__가독성을 위해 코드는 가급적 한 줄에 한 문장만!_</li>
+</ul>
+</li>
+<li><strong>큰따옴표(“ “)와 작은따옴표(‘ ‘) 겹침 오류 주의</strong><ul>
+<li>문자형 데이터 작성 시</li>
+<li>큰따옴표 겹침 오류<ul>
+<li>document.write(“책에 “자바스크립트는 대소문자를 구분해야 합니다”라고 나와 있다.”);</li>
+</ul>
+</li>
+<li>잘된 예<ul>
+<li>document.write(‘책에 “자바스크립트는 대소문자를 구분해야 합니다”라고 나와 있다.’);  </li>
+<li>document.write(“책에 \”자바스크립트는 대소문자를 구분해야 합니다\”라고 나와 있다.”);</li>
 </ul>
 </li>
 </ul>
-<pre><code>Chrome으로 HTML 문서 열기가 책에서는 [Ctrl + Alt + O] 라고 했지만,
-실제로는 [Alt + B] 였다.
-이유는 아직... 하지만 해당 확장 기능의 메뉴얼에도 [Alt + B] 가 나와 았다.
-&lt;hr&gt;
-다음장 : 01-03. 자바스크립트 맛보기 예제&lt;br&gt;
+</li>
+<li><strong>괄호 짝 맞추기</strong><ul>
+<li>소괄호( ), 중괄호{ }, 대괄호[ ]</li>
+<li>document.write(“welcome!”;  : (X)</li>
+<li>document.wirte(“weilcome”); : (O)</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;hr&gt;
+다음장 : 02-2. 변수&lt;br&gt;
 </code></pre>
         </div>
         <footer class="article-footer">
@@ -269,7 +301,7 @@
 
 
 
-    <a data-url="http://nayoungkim0918.github.io/2018/09/11/Do-It/Do-It-02-1/" data-id="cjlz6ie76000uusv7cwgiohaj" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://nayoungkim0918.github.io/2018/09/11/Do-It/Do-It-02-1/" data-id="cjlzjghwu000td8v7ofjghaa8" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

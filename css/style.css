@@ -226,11 +226,11 @@ body,
 }
 ::selection {
   color: #fff;
-  background: #b95aff;
+  background: #ffcd12;
 }
 body {
   background: #eaeaea;
-  font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+  font: 12px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 code {
@@ -274,14 +274,14 @@ code {
 .logo {
   display: block;
   padding: 10px 0;
-  width: 110px;
-  height: 140px;
-  background-image: url("https://user-images.githubusercontent.com/24776203/45427809-cf30ae80-b6da-11e8-8c5d-3ebb2ce87e52.png");
+  width: 105px;
+  height: 120px;
+  background-image: url("https://user-images.githubusercontent.com/24776203/45437316-89321580-b6ef-11e8-8bd1-e1e3d78ede5d.png");
   background-position: 0px 10px;
   background-repeat: no-repeat;
-  -webkit-background-size: 110px 140px;
-  -moz-background-size: 110px 140px;
-  background-size: 110px 140px;
+  -webkit-background-size: 105px 120px;
+  -moz-background-size: 105px 120px;
+  background-size: 105px 120px;
 }
 .main-body {
   margin-top: -60px;
@@ -344,7 +344,7 @@ code {
   clear: both;
 }
 #header {
-  background: #ef90ff /* #26272b */;
+  background: #368aff /* #26272b */;
   padding-bottom: 60px;
   position: relative;
 }
@@ -357,7 +357,7 @@ code {
 }
 #header-title {
   text-align: center;
-  padding: 30px 30px;
+  padding: 10px 30px;
 }
 #header-title:before,
 #header-title:after {
@@ -372,13 +372,13 @@ code {
   float: left;
 }
 #header-title .subtitle-wrap {
-  padding: 10px 0px 0px;
+  padding: 5px 0px 0px;
   margin-left: 20px;
 }
 #header-title .subtitle {
-  font-size: 16px;
-  font-style: italic;
-  line-height: 150px;
+  font-size: 30px;
+  font-style: bold /* italic */;
+  line-height: 130px;
   color: rgba(255,255,255,0.7);
   text-shadow: 0 1px rgba(0,0,0,0.2);
 }
@@ -419,7 +419,7 @@ code {
   line-height: 20px;
   padding: 15px 14px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
   cursor: pointer;
 }
@@ -564,7 +564,7 @@ code {
   display: none;
 }
 #sidebar .sidebar-top {
-  background: #b95aff;
+  background: #ffcd12;
   padding: 15px 30px;
 }
 #sidebar .sidebar-top:before,
@@ -683,7 +683,7 @@ code {
   background: rgba(0,0,0,0.02);
 }
 .article-nav-link-wrap:hover .icon {
-  color: #b95aff;
+  color: #ffcd12;
 }
 .article-nav-caption {
   display: block;
@@ -760,7 +760,7 @@ code {
 .widget-list ol li {
   margin: 10px 0;
   padding-bottom: 10px;
-  font-size: 15px;
+  font-size: 13px;
   border-bottom: 1px solid #e4e4e4;
 }
 .widget-list ul li:last-child,
@@ -801,7 +801,7 @@ code {
   padding-bottom: 0;
 }
 .widget-float a {
-  font-size: 15px;
+  font-size: 13px;
 }
 #recent-post li {
   padding: 10px 0 10px 94px;
@@ -859,7 +859,7 @@ code {
 }
 #recent-post li .item-inner a a,
 #recent-post li .item-inner .item-category a {
-  color: #b95aff;
+  color: #ffcd12;
 }
 #recent-post li .item-inner a a:hover,
 #recent-post li .item-inner .item-category a:hover {
@@ -890,7 +890,7 @@ code {
   opacity: 0.8;
 }
 #recent-post li:hover .item-title a {
-  color: #b95aff;
+  color: #ffcd12;
 }
 .category-list-count,
 .tag-list-count,
@@ -954,7 +954,7 @@ code {
 }
 .article-summary a {
   text-decoration: none;
-  color: #b95aff;
+  color: #ffcd12;
 }
 .article-summary .article-summary-inner {
   margin-right: 30px;
@@ -1013,7 +1013,7 @@ code {
 }
 .article-summary .article-summary-inner .article-title {
   margin-bottom: 10px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5em;
   word-wrap: break-word;
@@ -1028,7 +1028,7 @@ code {
 .article-summary .article-summary-inner .article-excerpt {
   position: relative;
   color: #aaa;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6em;
   overflow: hidden;
   height: 6.4em;
@@ -1037,7 +1037,7 @@ code {
   opacity: 0.7;
 }
 .article-summary:hover .article-title a {
-  color: #b95aff;
+  color: #7112ff /* color-theme */;
 }
 .article-category {
   float: left;
@@ -1062,7 +1062,7 @@ code {
   margin-bottom: 10px;
 }
 a.article-title:hover {
-  color: #b95aff;
+  color: #ffcd12;
 }
 .article-meta {
   line-height: 1.6em;
@@ -1101,7 +1101,7 @@ a.article-title:hover {
   overflow: hidden;
 }
 .article-summary .article-meta a {
-  color: #b95aff;
+  color: #ffcd12;
 }
 .article-summary .article-meta > div {
   margin-right: 0;
@@ -1111,7 +1111,7 @@ a.article-title:hover {
 }
 .article-entry {
   color: #555;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1.6em;
 }
@@ -1145,7 +1145,7 @@ a.article-title:hover {
   margin: 1.3em 0;
 }
 .article-entry a {
-  color: #b95aff;
+  color: #ffcd12;
   text-decoration: none;
 }
 .article-entry a:hover {
@@ -1208,7 +1208,7 @@ a.article-title:hover {
   font-family: 'FontAwesome';
 }
 .article-entry blockquote footer {
-  font-size: 14px;
+  font-size: 12px;
   margin: 1.6em 0;
   font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
 }
@@ -1264,13 +1264,13 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-more-link a:hover {
-  background: #b95aff;
+  background: #ffcd12;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 1px #9c15ff;
+  text-shadow: 0 1px #daac00;
 }
 .article-footer {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.6em;
   border-top: 1px solid #ddd;
   padding-top: 1.6em;
@@ -1490,7 +1490,7 @@ a.article-title:hover {
   padding: 30px 30px 20px;
 }
 #comments a {
-  color: #b95aff;
+  color: #ffcd12;
 }
 .archives-wrap {
   margin: block-margin 0;
@@ -1505,7 +1505,7 @@ a.article-title:hover {
 }
 .archive-year-wrap {
   padding: 18px 30px 17px;
-  font-size: 16px;
+  font-size: 14px;
   color: #666;
   border-bottom: 1px solid #eee;
 }
@@ -1546,7 +1546,7 @@ a.article-title:hover {
   line-height: 1.6em;
 }
 .archive-article-title:hover {
-  color: #b95aff;
+  color: #ffcd12;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -1589,7 +1589,7 @@ a.article-title:hover {
 }
 #page-nav .page-number,
 #page-nav .extend {
-  color: #b95aff;
+  color: #ffcd12;
   position: relative;
   overflow: hidden;
   font-size: 16px;
@@ -1612,17 +1612,18 @@ a.article-title:hover {
 #page-nav .page-number.current,
 #page-nav .extend.current {
   color: #444;
-  border-bottom: 3px solid #b95aff;
+  border-bottom: 3px solid #ffcd12;
   border-top: 1px solid #f1f1f1;
 }
 #page-nav .space {
   color: #ddd;
 }
 #footer {
-  background: #33363b;
-  margin-top: 60px;
+  background: #368aff /* #33363b */;
+  margin-top: 40px;
   color: #aaa;
   line-height: 1.6em;
+  text-align: right;
 }
 #footer a {
   color: #ccc;
@@ -1658,11 +1659,11 @@ a.article-title:hover {
   line-height: 22px;
 }
 #footer .logo {
-  width: 88px;
-  height: 112px;
-  -webkit-background-size: 88px 112px;
-  -moz-background-size: 88px 112px;
-  background-size: 88px 112px;
+  width: 52.5px;
+  height: 60px;
+  -webkit-background-size: 52.5px 60px;
+  -moz-background-size: 52.5px 60px;
+  background-size: 52.5px 60px;
 }
 i.icon {
   display: inline-block;
@@ -1729,7 +1730,7 @@ i.icon:before {
   display: inline-block;
 }
 .ins-close:hover {
-  color: #b95aff;
+  color: #ffcd12;
 }
 .ins-search-container {
   left: 50%;
@@ -1804,7 +1805,7 @@ i.icon:before {
 .ins-section .ins-search-item:hover,
 .ins-section .ins-search-item.active {
   color: #fff;
-  background: #b95aff;
+  background: #ffcd12;
 }
 .ins-section .ins-search-item:hover .ins-slug,
 .ins-section .ins-search-item.active .ins-slug,
@@ -1817,9 +1818,9 @@ i.icon:before {
   display: block;
   overflow-x: auto;
   padding: 15px 20px;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
-  line-height: 22.400000000000002px;
+  line-height: 19.200000000000003px;
 }
 .highlight table {
   margin: 0;
@@ -1943,7 +1944,7 @@ i.icon:before {
     color: rgba(255,255,255,0.7);
     text-align: center;
     height: 50px;
-    background: #b95aff;
+    background: #ffcd12;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -2049,7 +2050,7 @@ i.icon:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 12px;
   }
   #header .nav-container #main-nav .main-nav-list-item:before,
   #header .nav-container #main-nav .main-nav-list-link:before,
@@ -2093,10 +2094,10 @@ i.icon:before {
     float: none;
   }
   #header .nav-container #sub-nav .search-form:before {
-    font-size: 14px;
+    font-size: 12px;
   }
   #header .nav-container #sub-nav .search-form-input {
-    font-size: 14px;
+    font-size: 12px;
     width: 90%;
   }
   .main-body-inner {
