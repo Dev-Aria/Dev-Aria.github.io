@@ -1114,6 +1114,7 @@ a.article-title:hover {
   font-size: 15px;
   font-weight: 300;
   line-height: 1.6em;
+/* 색상 지정 태그 생성 */
 }
 .article-entry:before,
 .article-entry:after {
@@ -1122,6 +1123,30 @@ a.article-title:hover {
 }
 .article-entry:after {
   clear: both;
+}
+.article-entry red {
+  color: #ff3636;
+  font-weight: 600;
+}
+.article-entry pupple {
+  color: #6e2fc7;
+  font-weight: 600;
+}
+.article-entry backRed {
+  color: #fff;
+  background-color: #ff7e7e;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.article-entry backGreen {
+  color: #000;
+  background-color: #e1ff36;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .article-entry p,
 .article-entry table {
@@ -1230,7 +1255,8 @@ a.article-title:hover {
   margin-left: 1em;
 }
 .article-entry .caption {
-  color: #aaa;
+  color: #0054ff /* color-grey */;
+  font-weight: 800;
   display: block;
   font-size: 0.9em;
   margin-top: 0.5em;
@@ -1844,7 +1870,7 @@ i.icon:before {
   height: 1.6em;
 }
 .highlight {
-  color: #a9b7c6;
+  color: #fff /* #a9b7c6 */;
   background: #282b2e;
 }
 .highlight .code .number,
@@ -1868,12 +1894,12 @@ i.icon:before {
   color: #808080;
 }
 .highlight .code .meta {
-  color: #bbb529;
+  color: #489cff /* #bbb529 */;
 }
 .highlight .code .string,
 .highlight .code .attribute,
 .highlight .code .addition {
-  color: #6a8759;
+  color: #cb6cff /* #6A8759 */;
 }
 .highlight .code .section,
 .highlight .code .title,
@@ -1883,7 +1909,7 @@ i.icon:before {
 .highlight .code .name,
 .highlight .code .selector-id,
 .highlight .code .selector-class {
-  color: #e8bf6a;
+  color: #fb0 /*n#e8bf6a */;
 }
 .highlight .code .emphasis {
   font-style: italic;

@@ -10,10 +10,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Do_It,javascript,html" />
+        <meta name="keywords" content="Do_It,javascript,html,변수,undefined" />
     
     <meta name="description" content="02. 자바스크립트 기초 문법 자바스크립트의 기초 문법 선언문, 주석, 변수, 자료형, 연산자 03, 04장, 제이쿼리의 초석  02-2. 변수1. 변수란? 변수(Variables) 변하는 데이터(값)를 저장할 수 있는 메모리 공간 데이터를 담을 수 있는 그릇 하나의 변수에는 한 개의 데이터만 저장 새로운 데이터가 들어오면 기존 데이터는 메모리 공간에서 지">
-<meta name="keywords" content="Do_It,javascript,html">
+<meta name="keywords" content="Do_It,javascript,html,변수,undefined">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Do It! 02-2. 변수">
 <meta property="og:url" content="http://nayoungkim0918.github.io/2018/09/13/Do-It/Do-It-02-2/index.html">
@@ -176,7 +176,7 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Do-It/">Do_It</a>, <a class="tag-link" href="/tags/html/">html</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>
+        <a class="tag-link" href="/tags/Do-It/">Do_It</a>, <a class="tag-link" href="/tags/html/">html</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>, <a class="tag-link" href="/tags/undefined/">undefined</a>, <a class="tag-link" href="/tags/변수/">변수</a>
     </div>
 
             </div>
@@ -236,7 +236,7 @@
 <figure class="highlight html"><figcaption><span>02_2_var_ex1_test.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  var box;                    //box라는 이름의 변수 선언</span></span><br><span class="line"><span class="undefined">  document.write(box + "\n"); //undefined</span></span><br><span class="line"><span class="undefined">  box = 100;                  //변수 box에 숫자형 데이터 100 대입</span></span><br><span class="line"><span class="undefined">  document.write(box + "\n"); //100</span></span><br><span class="line"><span class="undefined">  box = 30;                   //변수 box에 숫자형 데이터 30 대입</span></span><br><span class="line"><span class="undefined">  document.write(box)         //30  </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://user-images.githubusercontent.com/24776203/45564167-920b1e80-b88a-11e8-9e4f-d38b5df0b3c0.png" alt="[그림1] 변수 상태 변화 확인"></p>
 </li>
-<li><p>책에서는 가장 마지막 box만 출력했지만 값을 비교해보고 싶어서 모든 경우의 box를 출력해봤다.<br><strong>① var box; =&gt; undefined</strong><br>  값이 지정되지 않은 변수는 null 이라고 출력될 줄 알았지만 undefined 라고 출력됐다.<br>  아직 확실하게 안 것은 아니지만 javascript는 기존에 배웠던 <strong>C언어</strong> 나 <strong>JAVA</strong> 와는 달리 자료형이 따로 없다. 문자형은 Char/String, 숫자형은 Int/Float/Double 등의 <strong>지정된 자료형</strong> 을 반드시 선언과 동시에 선택해야 한다.<br>  하지만 <strong>javascript</strong> 에서는 특정 자료형 대신 <strong>var</strong> 라는 공통된 자료형을 사용한다. 문자열, 정수, 실수, 배열, 클래스 등을 담을 수 있다.<br>  이런 특징으로 보아 단순히 비어있다는 의미의 null 보다는 아직 정의되지 않았다는 의미로 undefined로 출력되는 것 같다.<br>  이 부분에 대해서는 확실하게 알게되면 추후 업데이트 할 것이다.<br><strong>② box = 100; =&gt; 100</strong><br>  비어있던 변수 box에 100 이라는 숫자형/정수형 데이터가 대입됐다.<br>  미정이던 변수형이 지정됨과 동시에 100이라는 값이 저장된 것이다.<br><strong>③ box = 30; =&gt; 30</strong><br>  100 이라는 값이 저장된 변수 box에 30 이라는 값이 저장됐다.<br>  기존에 저장돼 있던 값 100은 삭제되고, 다시 null 상태가 된 자리에 30 이라는 값이 새롭게 저장되는 것이다.<br>  각각의 변수가 차지하는 메모리 공간은 지정돼 있기 때문에 배열이나 구조체를 사용하지 않는 이상 하나의 변수에는 하나의 값만 저장된다.</p>
+<li><p>책에서는 가장 마지막 box만 출력했지만 값을 비교해보고 싶어서 모든 경우의 box를 출력해봤다.<br><strong>① var box; =&gt; undefined</strong><br>  값이 지정되지 않은 변수는 null 이라고 출력될 줄 알았지만 undefined 라고 출력됐다.<br>  아직 확실하게 안 것은 아니지만 javascript는 기존에 배웠던 <strong>C언어</strong> 나 <strong>JAVA</strong> 와는 달리 자료형이 따로 없다. 문자형은 Char/String, 숫자형은 Int/Float/Double 등의 <strong>지정된 자료형</strong> 을 반드시 선언과 동시에 선택해야 한다.<br>  하지만 <strong>javascript</strong> 에서는 특정 자료형 대신 <strong>var</strong> 라는 공통된 자료형을 사용한다. 문자열, 정수, 실수, 배열, 클래스 등을 담을 수 있다.<br>  이런 특징으로 보아 단순히 비어있다는 의미의 null 보다는 아직 정의되지 않았다는 의미로 undefined로 출력되는 것 같다.<br>  이 부분에 대해서는 확실하게 알게되면 추후 업데이트 할 것이다.<br><strong>② box = 100; =&gt; 100</strong><br>  비어있던 변수 box에 100 이라는 숫자형/정수형 데이터가 대입됐다.<br>  미정이던 변수형이 지정됨과 동시에 100이라는 값이 저장된 것이다.<br><strong>③ box = 30; =&gt; 30</strong><br>  100 이라는 값이 저장된 변수 box에 30 이라는 값이 저장됐다.<br>  기존에 저장돼 있던 값 100은 삭제되고, 다시 null 상태가 된 자리에 30 이라는 값이 새롭게 저장되는 것이다.<br>  각각의 변수가 차지하는 메모리 공간은 지정돼 있기 때문에 배열이나 구조체를 사용하지 않는 이상 하나의 변수에는 하나의 값만 저장된다.<br><br><br></p>
 </li>
 </ul>
 </li>
@@ -300,19 +300,65 @@
 <p><img src="https://user-images.githubusercontent.com/24776203/45568320-46ab3d00-b897-11e8-9134-164e84ab7bfe.png" alt="[그림4] Boolean() 메서드 출력 결과"></p>
 </li>
 </ul>
-<p><red> 과연???!?!? </red><br><puppleblue> 과연???!?!? </puppleblue></p>
-<backred> 과연???!?!? </backred>
-
-
-
-
-
+<p><br>    </p>
+</li>
+<li><p><strong>null &amp; undefined 데이터</strong></p>
+<ul>
+<li><strong>undefined</strong> <ul>
+<li>변수에 값이 등록되기 전의 기본값</li>
+</ul>
+</li>
+<li><p><strong>null</strong> </p>
+<ul>
+<li>변수에 저장된 값이 null인 경우</li>
+<li><p>변수에 저장된 데이터를 비우고자 할 때 사용하는 값</p>
+<figure class="highlight html"><figcaption><span>null과 undefined 비교 출력</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">      <span class="tag">&lt;<span class="name">Script</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="undefined">        var var1;   </span></span><br><span class="line"><span class="undefined">        var var2 = "Hello";</span></span><br><span class="line"><span class="xml">        document.write("var1 : " + var1 + "<span class="tag">&lt;<span class="name">br</span>&gt;</span>");        </span></span><br><span class="line"><span class="xml">        document.write("var2 : " + var2 + "<span class="tag">&lt;<span class="name">br</span>&gt;</span>");</span></span><br><span class="line"><span class="undefined">        var2 = null;    </span></span><br><span class="line"><span class="undefined">        document.write("var2 : " + var2;  </span></span><br><span class="line"><span class="undefined">      </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">      ```        </span><br><span class="line">      ![[그림5] null과 undefined 변수 출력 결과](https://user-images.githubusercontent.com/24776203/45588201-e1fdea00-b94b-11e8-80ef-d511fcfef6e6.png)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span>    </span><br><span class="line">- __typeof__</span><br><span class="line">  - 지정한 데이터 또는 변수에 저장된 자료형 확인 </span><br><span class="line">    ```html typeof 기본형</span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        typeof 변수;</span></span><br><span class="line"><span class="undefined">        typeof 데이터;</span></span><br><span class="line"><span class="undefined">      </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>변수 자료형 출력</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Script</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="undefined">  var num = 100;   </span></span><br><span class="line"><span class="undefined">  var str = "자바스크립트";</span></span><br><span class="line"><span class="xml">  document.write("변수 num 자료형 : " + typeof num + "<span class="tag">&lt;<span class="name">br</span>&gt;</span>");        </span></span><br><span class="line"><span class="xml">  document.write("변수 str 자료형 : " + typeof str + "<span class="tag">&lt;<span class="name">br</span>&gt;</span>");</span></span><br><span class="line"><span class="undefined">  document.write("데이터 true 자료형 : " + typeof true);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><br></p>
+<p><img src="https://user-images.githubusercontent.com/24776203/45588294-6866fb80-b94d-11e8-9287-8edf82a88099.png" alt="[그림6] typeof로 자료형 출력 결과"></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><br>    </p>
+<h3 id="3-변수-선언-시-주의-사항"><a href="#3-변수-선언-시-주의-사항" class="headerlink" title="3. 변수 선언 시 주의 사항"></a>3. 변수 선언 시 주의 사항</h3><ul>
+<li>① 변수의 <strong>첫 글자</strong> 로는 <strong>영문자ㅡ $, _(언더바)</strong> 만 가능<ul>
+<li>var 1num = 10; (X)</li>
+<li>var $num = 10; (O)</li>
+</ul>
+</li>
+<li>② 변수의 <strong>첫 글자 다음</strong> 은 <strong>영문자, 숫자, $, _(언더바)</strong> 만 가능<ul>
+<li>var 100num = 10; (X)</li>
+<li>var num100 = 10; (O)</li>
+</ul>
+</li>
+<li>③ <strong>변수명</strong> 으로 <strong>예약어</strong> 사용 불가<ul>
+<li>예약어 <ul>
+<li>이미 자바스크립트에서 사용중인 단어</li>
+<li>document, location, window 등</li>
+</ul>
+</li>
+<li>var document = 10; (X)</li>
+<li>var num = 10; (O)</li>
+</ul>
+</li>
+<li>④ <strong>변수명</strong> 작명 시, <strong>의미부여</strong><ul>
+<li>var num = “hello”; (X)</li>
+<li>var num = 10; (O)</li>
+</ul>
+</li>
+<li>⑤ <strong>변수명</strong> 작명 시, <strong>대소문자</strong> 구분<ul>
+<li>var num = 10; document.write(Num); (X)</li>
+<li>var num = 10; document.write(num); (X)</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
 <p><hr><br>코드를 실행할 때 이상한 점이 있다.<br>document.write() 메서드에서 줄바꿈(“\n”)이 적용되질 않는다.<br>alert()에 테스트 했을 때는 또 잘 된다.<br>혹시나 write()는 한줄 작성만 되는 건가 하는 생각에 구글링 해봤지만 역시나 헛생각이었다..<br>대체 왜 안되는거지?!<br>Visual Studio Code의 문제인지, Chrome이 문제인지 몇가지 테스트를 더 해봐야 할 것 같다.<br>다행인 건 <br> 태그는 먹는다는 점이다.<br>문제를 해결하기 전 까지 실행 결과는 alert()으로 출력하고 이미지 등 특별한 경우에는 write()를 쓸 예정이다. 개행문자가 적용되지 않아도 크게 문제는 없다. 단지 가독성을 높이고 싶은 욕심이랄까.</p>
 <p><hr></p>
-<p><backred>Github Page에서 글씨에 색깔 넣는 법</backred>을 발견했다!!!<br>그 동안 적용하고 싶어서 많이 검색해봤었는데 다들 마크다운 문법에서는 불가능하다고 했다.<br>하지만 <puppleblue>간단한 CSS 코드</puppleblue>로 가능하다!! 변수 포스팅이 끝나면 바로 이 주제를 포스팅해야지ㅎㅎㅎ</p>
+<p><backred>Github Page에서 글씨에 색깔 넣는 법</backred>을 발견했다!!!<br>그 동안 적용하고 싶어서 많이 검색해봤었는데 다들 마크다운 문법에서는 불가능하다고 했다.<br>하지만 <pupple>간단한 CSS 코드</pupple>로 가능하다!! 변수 포스팅이 끝나면 바로 이 주제를 포스팅해야지ㅎㅎㅎ</p>
+<p>  <red> 빨간색이 되면 </red><br>  <pupple> 보라색도 되고 </pupple><br>  <backgreen> 글자색이 되면 형광펜도 되지 </backgreen></p>
 
         </div>
         <footer class="article-footer">
@@ -320,7 +366,7 @@
 
 
 
-    <a data-url="http://nayoungkim0918.github.io/2018/09/13/Do-It/Do-It-02-2/" data-id="cjm0wrmlj000t5ov7olaxnw3a" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://nayoungkim0918.github.io/2018/09/13/Do-It/Do-It-02-2/" data-id="cjmah435i000xacv71i4uslh2" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -527,7 +573,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">태그 클라우드</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 17.5px;">Do_It</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 15px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12.5px;">start</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 10px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/출판/" style="font-size: 10px;">출판</a>
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 17.5px;">Do_It</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 15px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12.5px;">start</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 10px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/출판/" style="font-size: 10px;">출판</a>
         </div>
     </div>
 

@@ -37,6 +37,20 @@
     </url>
 
     <url>
+        <loc>http://nayoungkim0918.github.io/tags/%EC%A3%BC%EC%84%9D/</loc>
+        <lastmod>2018-09-11T08:59:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/%EC%99%B8%EB%B6%80-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%97%B0%EB%8F%99/</loc>
+        <lastmod>2018-09-11T08:59:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://nayoungkim0918.github.io/tags/start/</loc>
         <lastmod>2018-09-12T19:18:17.993Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -88,6 +102,20 @@
     <url>
         <loc>http://nayoungkim0918.github.io/tags/%EC%A0%95%EC%9D%B8%EC%9A%A9/</loc>
         <lastmod>2018-09-12T19:18:17.993Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/%EB%B3%80%EC%88%98/</loc>
+        <lastmod>2018-09-12T20:02:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/undefined/</loc>
+        <lastmod>2018-09-12T20:02:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
