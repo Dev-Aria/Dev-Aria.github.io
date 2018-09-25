@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Eunoia Blog">
 <meta property="og:description" content="01. 자바스크립트 시작하기 Front-End 개발 개념 자바스크립트 개념 왜 자바스크립트를 배워야 하는가 편집 프로그램 설치 Google Chrome 브라우저 설치 Editor 사용법 익히기 간단한 예제  01-2. 개발 환경 준비하기1. 크롬 브라우저 설치하고 개발자 도구 살펴보기 Browser Download https://goo.gl/bcamzC [">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2018-09-12T20:06:15.417Z">
+<meta property="og:updated_time" content="2018-09-20T17:08:49.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Do it! 01-2. 개발 환경 준비하기">
 <meta name="twitter:description" content="01. 자바스크립트 시작하기 Front-End 개발 개념 자바스크립트 개념 왜 자바스크립트를 배워야 하는가 편집 프로그램 설치 Google Chrome 브라우저 설치 Editor 사용법 익히기 간단한 예제  01-2. 개발 환경 준비하기1. 크롬 브라우저 설치하고 개발자 도구 살펴보기 Browser Download https://goo.gl/bcamzC [">
@@ -203,29 +203,54 @@
 <li>F12 클릭</li>
 </ul>
 </li>
-<li>패널의 기능<br>test<br><table><br>  <tr><pre><code>&lt;td&gt;패널&lt;td&gt;
-&lt;td&gt;기능&lt;td&gt;
-</code></pre>  </tr><br>  <tr><pre><code>&lt;td&gt;Elementes&lt;/td&gt;
-&lt;td&gt;HTML(Elements) 요소에 적용된 스타일(CSS) 체크&lt;/td&gt;
-</code></pre>  </tr><br>  <tr><pre><code>&lt;td&gt;Console&lt;/td&gt;
-&lt;td&gt;자바스크립트 오류 체크, 디버깅(Debugging)&lt;/td&gt;
-</code></pre>  </tr><br>  <tr><pre><code>&lt;td&gt;Source&lt;/td&gt;
-&lt;td&gt;브라우저가 자바스크립트 소스를 파싱(Parsing) 해오는 과정 체크, 오류 체크, 디버깅&lt;/td&gt;
-</code></pre>  </tr><br></table><br>패널 | 기능<br>——–|——–<br>Elementes | HTML(Elements) 요소에 적용된 스타일(CSS) 체크<br>Console | 자바스크립트 오류 체크, 디버깅(Debugging)<br>Source | 브라우저가 자바스크립트 소스를 파싱(Parsing) 해오는 과정 체크, 오류 체크, 디버깅<ul>
-<li>parsing <ul>
-<li>저장된 값을 원하는 형식의 값으로 가공해 읽어오는 것</li>
-</ul>
-</li>
-<li>debugging <ul>
-<li>버그를 검사하고 수정하는 작업</li>
-<li>버그(bug) : 프로그래머가 잘못 코딩한 프로그램 실행 시 오류(error) 발생</li>
+<li>패널의 기능     </li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><center>패널</center></th>
+<th style="text-align:center">기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><center><strong>Elementes</strong></center></td>
+<td style="text-align:center">HTML(Elements) 요소에 적용된 스타일(CSS) 체크</td>
+</tr>
+<tr>
+<td style="text-align:left"><center><strong>Console</strong></center></td>
+<td style="text-align:center">자바스크립트 오류 체크, 디버깅(Debugging)</td>
+</tr>
+<tr>
+<td style="text-align:left"><center><strong>Source</strong></center></td>
+<td style="text-align:center">브라우저가 자바스크립트 소스를 파싱(Parsing) 해오는 과정 체크, 오류 체크, 디버깅</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><center>단어</center></th>
+<th style="text-align:center">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><center>parsing</center></td>
+<td style="text-align:center">저장된 값을 원하는 형식의 값으로 가공해 읽어오는 것</td>
+</tr>
+<tr>
+<td style="text-align:left"><center>debugging</center></td>
+<td style="text-align:center">버그를 검사하고 수정하는 작업</td>
+</tr>
+<tr>
+<td style="text-align:left"><center>bug(버그)</center></td>
+<td style="text-align:center">프로그래머가 잘못 코딩한 프로그램 실행 시 오류(error) 발생</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h4 id="2-자바스크립트-편집기-설치와-사용법"><a href="#2-자바스크립트-편집기-설치와-사용법" class="headerlink" title="2. 자바스크립트 편집기 설치와 사용법"></a>2. 자바스크립트 편집기 설치와 사용법</h4><ul>
 <li><p><strong>자바스크립트 편집기(Editor)</strong></p>
@@ -255,17 +280,7 @@
 </li>
 <li>레이아웃<ul>
 <li>기본 환경 구성<ul>
-<li>View bar, Side bar, Editor Groups, Panel, Status Bar<br>|구성|기능|<br>|:——–:|:——–:|<br>|뷰 바|사이드 바 기능 변경(탐색기, 검색, Git, 디버거, 확장)|<br>|사이드 바|프로젝트 작업 동안 기능 바꿔가며 사용 가능|<br>|편집기 그룹|소스 편집 영역, 최대 3개까지 창 분할 가능, 동시에 여러 파일 로드 가능|<br>|패널|출력, 디버그 정보, 오류, 경고 등의 표시|<br>|상태 바|현재 프로젝트와 편집하고 있는 파일의 정보 제공|</li>
-<li>탐색기 : 작업 중인 폴더와 파일 관리</li>
-<li>검색 : 문서 안의 내용 검색</li>
-<li>Git : Git을 이용한 버전 관리</li>
-<li>디버거 : 프로그래밍 오류 디버깅</li>
-<li>확장 : 기능 확장, 확장 기능 목록 표시</li>
-</ul>
-</li>
-<li>화면 색상 변경<ul>
-<li>[파일 - 기본 설정 - 색 테마]</li>
-<li>‘Light + (default light)’ 선택</li>
+<li>View bar, Side bar, Editor Groups, Panel, Status Bar</li>
 </ul>
 </li>
 </ul>
@@ -273,6 +288,70 @@
 </ul>
 </li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">구성</th>
+<th style="text-align:center">기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>뷰 바</strong></td>
+<td style="text-align:center">사이드 바 기능 변경(탐색기, 검색, Git, 디버거, 확장)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>사이드 바</strong></td>
+<td style="text-align:center">프로젝트 작업 동안 기능 바꿔가며 사용 가능</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>편집기 그룹</strong></td>
+<td style="text-align:center">소스 편집 영역, 최대 3개까지 창 분할 가능, 동시에 여러 파일 로드 가능</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>패널</strong></td>
+<td style="text-align:center">출력, 디버그 정보, 오류, 경고 등의 표시</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>상태 바</strong></td>
+<td style="text-align:center">현재 프로젝트와 편집하고 있는 파일의 정보 제공</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><center>단어</center></th>
+<th style="text-align:center">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><center>탐색기</center></td>
+<td style="text-align:center">작업 중인 폴더와 파일 관리</td>
+</tr>
+<tr>
+<td style="text-align:left"><center>검색</center></td>
+<td style="text-align:center">문서 안의 내용 검색</td>
+</tr>
+<tr>
+<td style="text-align:left"><center>Git</center></td>
+<td style="text-align:center">Git을 이용한 버전 관리</td>
+</tr>
+<tr>
+<td style="text-align:left"><center>디버거</center></td>
+<td style="text-align:center">프로그래밍 오류 디버깅</td>
+</tr>
+<tr>
+<td style="text-align:left"><center>확장</center></td>
+<td style="text-align:center">기능 확장, 확장 기능 목록 표시</td>
+</tr>
+<tr>
+<td style="text-align:left"><center>화면 색상 변경</center></td>
+<td style="text-align:center">[파일 - 기본 설정 - 색 테마] _ ‘Light + (default light)’ 선택</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><p><strong>확장 기능 이용해 HTML 문서를 크롬 브라우저에서 바로 열기</strong></p>
 <ul>
@@ -345,7 +424,7 @@ Chrome으로 HTML 문서 열기가 책에서는 [Ctrl + Alt + O] 라고 했지�
 
 
 
-    <a data-url="http://nayoungkim0918.github.io/2018/09/11/Do-It/Do_It-01_2/" data-id="cjmah435i000uacv772w6eokt" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://nayoungkim0918.github.io/2018/09/11/Do-It/Do_It-01_2/" data-id="cjmgg4snz0012oov71s6v8rvs" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -486,7 +565,7 @@ Chrome으로 HTML 문서 열기가 책에서는 [Ctrl + Alt + O] 라고 했지�
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">카테고리</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">5</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">6</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
         </div>
     </div>
 
@@ -497,6 +576,24 @@ Chrome으로 HTML 문서 열기가 책에서는 [Ctrl + Alt + O] 라고 했지�
         <h3 class="widget-title">최근 글</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/09/24/Do-It/Do-It-02-4/" class="title">Do-It-02-4.md</a></p>
+                            <p class="item-date"><time datetime="2018-09-24T14:10:49.000Z" itemprop="datePublished">2018-09-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/09/21/Do-It/Do-It-02-3/" class="title">[Do It!] 02-3. 연산자</a></p>
+                            <p class="item-date"><time datetime="2018-09-20T16:24:19.000Z" itemprop="datePublished">2018-09-21</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -525,24 +622,6 @@ Chrome으로 HTML 문서 열기가 책에서는 [Ctrl + Alt + O] 라고 했지�
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
-                            <p class="item-title"><a href="/2018/09/11/Do-It/Do_It-01_2/" class="title">Do it! 01-2. 개발 환경 준비하기</a></p>
-                            <p class="item-date"><time datetime="2018-09-10T18:21:00.000Z" itemprop="datePublished">2018-09-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/HEXO/">HEXO</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/HEXO/Setting/">Setting</a></p>
-                            <p class="item-title"><a href="/2018/09/11/post-theme-hueman/" class="title">Hueman 테마를 적용하다</a></p>
-                            <p class="item-date"><time datetime="2018-09-10T17:51:00.000Z" itemprop="datePublished">2018-09-11</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -552,7 +631,7 @@ Chrome으로 HTML 문서 열기가 책에서는 [Ctrl + Alt + O] 라고 했지�
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">기록 보관소</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">9</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">11</span></li></ul>
         </div>
     </div>
 
@@ -562,7 +641,7 @@ Chrome으로 HTML 문서 열기가 책에서는 [Ctrl + Alt + O] 라고 했지�
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">태그 클라우드</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 17.5px;">Do_It</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 15px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12.5px;">start</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 10px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/출판/" style="font-size: 10px;">출판</a>
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 17.5px;">Do_It</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 15px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12.5px;">start</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/연산자/" style="font-size: 10px;">연산자</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 10px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/출판/" style="font-size: 10px;">출판</a>
         </div>
     </div>
 
