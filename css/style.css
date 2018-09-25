@@ -1128,25 +1128,41 @@ a.article-title:hover {
   color: #ff3636;
   font-weight: 600;
 }
-.article-entry pupple {
+.article-entry violet {
   color: #6e2fc7;
   font-weight: 600;
 }
 .article-entry backRed {
   color: #fff;
   background-color: #ff7e7e;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .article-entry backGreen {
   color: #000;
   background-color: #e1ff36;
+  font-weight: 600;
+  font-size: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.article-entry backViolet {
+  color: #fff;
+  background-color: #dd7eff;
   font-weight: 500;
   font-size: 15px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.article-entry backDeepViolet {
+  color: #fff;
+  background-color: #9536ff;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .article-entry p,
 .article-entry table {
@@ -1255,7 +1271,7 @@ a.article-title:hover {
   margin-left: 1em;
 }
 .article-entry .caption {
-  color: #0054ff /* color-grey */;
+  color: #353535;
   font-weight: 800;
   display: block;
   font-size: 0.9em;
@@ -1877,17 +1893,17 @@ i.icon:before {
 .highlight .code .literal,
 .highlight .code .symbol,
 .highlight .code .bullet {
-  color: #6897bb;
+  color: #a3a2ff;
 }
 .highlight .code .keyword,
 .highlight .code .selector-tag,
 .highlight .code .deletion {
-  color: #cc7832;
+  color: #cb6cff;
 }
 .highlight .code .variable,
 .highlight .code .template-variable,
 .highlight .code .link {
-  color: #629755;
+  color: #cfff24;
 }
 .highlight .code .comment,
 .highlight .code .quote {
@@ -1899,12 +1915,12 @@ i.icon:before {
 .highlight .code .string,
 .highlight .code .attribute,
 .highlight .code .addition {
-  color: #cb6cff /* #6A8759 */;
+  color: #ffb4ff /* #6A8759 */;
 }
 .highlight .code .section,
 .highlight .code .title,
 .highlight .code .type {
-  color: #ffc66d;
+  color: #9536ff;
 }
 .highlight .code .name,
 .highlight .code .selector-id,

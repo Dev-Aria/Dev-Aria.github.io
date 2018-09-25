@@ -469,6 +469,10 @@
 <p><br></p>
 <h3 id="8-연산자-우선순위"><a href="#8-연산자-우선순위" class="headerlink" title="8. 연산자 우선순위"></a>8. 연산자 우선순위</h3><ul>
 <li>일반적인 산수에도 우선순위가 존재하듯이 코딩 연산자에도 우선순위가 존재한다.<br><strong>① (괄호)</strong><br><strong>② 단항 연산자 : –, ++, !</strong><br><strong>③ 산술 연산자 : *, /, %, +, -</strong><br><strong>④ 비교 연산자 : &gt;, &gt;=, &lt;, &lt;=, ==, ===, !==, !=</strong><br><strong>⑤ 논리 연산자 : &amp;&amp; ||</strong><br><strong>⑥ 대입/복합대입 연산자 : =, +=, -=, *=, /=, %=</strong><br><br></li>
+<li><backgreen>[EX]</backgreen> <strong>++A * B &lt;= C</strong> <ul>
+<li>변수 A에 데이터 1을 증가시키고 B를 곱한 다음 그 값을 C와 비교한 후 최종 결괏값 반환<br><br></li>
+</ul>
+</li>
 <li><p><backviolet>연산자 우선순위 예제(비교+논리)</backviolet></p>
   <figure class="highlight javascript"><figcaption><span>02_3_operator_ex6_test.html     </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">var</span> m = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">var</span> n = <span class="number">40</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result;</span><br><span class="line">result = a &gt; b || b &gt;= m || m &gt; n;     <span class="comment">//false || false || false</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"10 &gt; 20 || 20 &gt;= 30 || 30 &gt; 40 : "</span> + result, <span class="string">"&lt;br&gt;&lt;br&gt;"</span>); <span class="comment">//false</span></span><br><span class="line">  </span><br><span class="line">result = a &gt; b || b &gt;= m || m &lt;= n;     <span class="comment">//false || false || true</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"10 &gt; 20 || 20 &gt;= 30 || 30 &lt;= 40 : "</span> + result, <span class="string">"&lt;br&gt;&lt;br&gt;"</span>); <span class="comment">//true</span></span><br><span class="line">    </span><br><span class="line">result = a &lt;= b &amp;&amp; b &gt;= m &amp;&amp; m &lt;= n;    <span class="comment">//true &amp;&amp; false &amp;&amp; true</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"10 &lt;= 20 || 20 &gt;= 30 || 30 &lt;= 40 : "</span> + result, <span class="string">"&lt;br&gt;&lt;br&gt;"</span>); <span class="comment">//false</span></span><br><span class="line">    </span><br><span class="line">result = a &lt;= b &amp;&amp; b &lt;= m &amp;&amp; m &lt;= n;     <span class="comment">//true &amp;&amp; true &amp;&amp; true</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"10 &lt;= 20 || 20 &lt;= 30 || 30 &lt;= 40 : "</span> + result, <span class="string">"&lt;br&gt;&lt;br&gt;"</span>); <span class="comment">//true</span></span><br><span class="line">    </span><br><span class="line">result = !(a&gt;b);     <span class="comment">//!false를 계산</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"!(10 &gt; 20) : "</span> + result); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 <p> <img src="https://user-images.githubusercontent.com/24776203/46031457-da042e00-c133-11e8-8e51-458081881661.png" alt="[그림7] 연산자 우선순위(비교+논리) 결과 출력"></p>
@@ -487,7 +491,7 @@
 
 
 
-    <a data-url="http://nayoungkim0918.github.io/2018/09/21/Do-It/Do-It-02-3/" data-id="cjmgg4snt000xoov7acghgnrv" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://nayoungkim0918.github.io/2018/09/21/Do-It/Do-It-02-3/" data-id="cjmi05rde000zu8v7pdd45qss" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -628,7 +632,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">카테고리</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">6</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">6</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
         </div>
     </div>
 
@@ -639,6 +643,15 @@
         <h3 class="widget-title">최근 글</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/09/26/Hexo/Hexo-Themes-Hueman-Customizing/" class="title">Hexo_Themes_Hueman_Customizing</a></p>
+                            <p class="item-date"><time datetime="2018-09-25T17:35:41.000Z" itemprop="datePublished">2018-09-26</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -676,15 +689,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
-                            <p class="item-title"><a href="/2018/09/11/Do-It/Do-It-01-3/" class="title">Do it! 01-3. 자바스크립트 맛보기 예제</a></p>
-                            <p class="item-date"><time datetime="2018-09-11T05:55:31.000Z" itemprop="datePublished">2018-09-11</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -694,7 +698,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">기록 보관소</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">11</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">12</span></li></ul>
         </div>
     </div>
 
