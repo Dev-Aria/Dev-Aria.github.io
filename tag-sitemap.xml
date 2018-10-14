@@ -93,13 +93,6 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/Mission/</loc>
-        <lastmod>2018-09-26T15:08:33.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://nayoungkim0918.github.io/tags/start/</loc>
         <lastmod>2018-09-27T09:40:12.135Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -163,8 +156,29 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/%EC%A0%9C%EC%96%B4%EB%AC%B8/</loc>
-        <lastmod>2018-10-08T07:12:07.000Z</lastmod>
+        <loc>http://nayoungkim0918.github.io/tags/if/</loc>
+        <lastmod>2018-10-01T10:58:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/else/</loc>
+        <lastmod>2018-10-01T10:58:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/else-if/</loc>
+        <lastmod>2018-10-01T10:58:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/%EC%A4%91%EC%B2%A9-if/</loc>
+        <lastmod>2018-10-01T10:58:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -177,21 +191,14 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/Do-It/</loc>
-        <lastmod>2018-10-12T07:02:34.000Z</lastmod>
+        <loc>http://nayoungkim0918.github.io/tags/switch/</loc>
+        <lastmod>2018-10-08T07:12:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/javascript/</loc>
-        <lastmod>2018-10-12T07:02:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/html/</loc>
+        <loc>http://nayoungkim0918.github.io/tags/%EC%A0%9C%EC%96%B4%EB%AC%B8/</loc>
         <lastmod>2018-10-12T07:02:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -200,6 +207,76 @@
     <url>
         <loc>http://nayoungkim0918.github.io/tags/%EB%B0%98%EB%B3%B5%EB%AC%B8/</loc>
         <lastmod>2018-10-12T07:02:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/while/</loc>
+        <lastmod>2018-10-12T07:02:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/do-while/</loc>
+        <lastmod>2018-10-12T07:02:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/for/</loc>
+        <lastmod>2018-10-12T07:02:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/break/</loc>
+        <lastmod>2018-10-12T07:02:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/continue/</loc>
+        <lastmod>2018-10-12T07:02:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/%EC%A4%91%EC%B2%A9-for/</loc>
+        <lastmod>2018-10-12T07:02:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Do-It/</loc>
+        <lastmod>2018-10-14T08:32:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/javascript/</loc>
+        <lastmod>2018-10-14T08:32:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/html/</loc>
+        <lastmod>2018-10-14T08:32:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Mission/</loc>
+        <lastmod>2018-10-14T08:32:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
