@@ -254,29 +254,36 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/Do-It/</loc>
+        <loc>http://nayoungkim0918.github.io/tags/Mission/</loc>
         <lastmod>2018-10-14T08:32:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Do-It/</loc>
+        <lastmod>2018-10-15T13:33:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://nayoungkim0918.github.io/tags/javascript/</loc>
-        <lastmod>2018-10-14T08:32:08.000Z</lastmod>
+        <lastmod>2018-10-15T13:33:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://nayoungkim0918.github.io/tags/html/</loc>
-        <lastmod>2018-10-14T08:32:08.000Z</lastmod>
+        <lastmod>2018-10-15T13:33:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/Mission/</loc>
-        <lastmod>2018-10-14T08:32:08.000Z</lastmod>
+        <loc>http://nayoungkim0918.github.io/tags/%EA%B0%9D%EC%B2%B4/</loc>
+        <lastmod>2018-10-15T13:33:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
