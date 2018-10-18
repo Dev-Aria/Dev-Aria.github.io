@@ -262,28 +262,35 @@
 
     <url>
         <loc>http://nayoungkim0918.github.io/tags/Do-It/</loc>
-        <lastmod>2018-10-15T13:33:57.000Z</lastmod>
+        <lastmod>2018-10-18T13:33:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://nayoungkim0918.github.io/tags/javascript/</loc>
-        <lastmod>2018-10-15T13:33:57.000Z</lastmod>
+        <lastmod>2018-10-18T13:33:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://nayoungkim0918.github.io/tags/html/</loc>
-        <lastmod>2018-10-15T13:33:57.000Z</lastmod>
+        <lastmod>2018-10-18T13:33:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://nayoungkim0918.github.io/tags/%EA%B0%9D%EC%B2%B4/</loc>
-        <lastmod>2018-10-15T13:33:57.000Z</lastmod>
+        <lastmod>2018-10-18T13:33:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/%EB%82%B4%EC%9E%A5-%EA%B0%9D%EC%B2%B4/</loc>
+        <lastmod>2018-10-18T13:33:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
