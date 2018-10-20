@@ -205,34 +205,6 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/Do-It/</loc>
-        <lastmod>2018-10-19T08:22:09.970Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/html/</loc>
-        <lastmod>2018-10-19T08:22:09.970Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/chrome/</loc>
-        <lastmod>2018-10-19T08:22:09.970Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/visual-studio-code/</loc>
-        <lastmod>2018-10-19T08:22:09.970Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://nayoungkim0918.github.io/tags/Follow-Me-%EC%8B%9C%EB%A6%AC%EC%A6%88/</loc>
         <lastmod>2018-10-19T08:38:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -262,13 +234,6 @@
 
     <url>
         <loc>http://nayoungkim0918.github.io/tags/start/</loc>
-        <lastmod>2018-10-19T11:37:03.471Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/javascript/</loc>
         <lastmod>2018-10-19T11:37:03.471Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -319,6 +284,41 @@
     <url>
         <loc>http://nayoungkim0918.github.io/tags/%EC%A0%95%EC%9D%B8%EC%9A%A9/</loc>
         <lastmod>2018-10-19T11:37:03.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Do-It/</loc>
+        <lastmod>2018-10-20T17:06:56.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/javascript/</loc>
+        <lastmod>2018-10-20T17:06:56.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/html/</loc>
+        <lastmod>2018-10-20T17:06:56.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/chrome/</loc>
+        <lastmod>2018-10-20T17:06:56.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/visual-studio-code/</loc>
+        <lastmod>2018-10-20T17:06:56.874Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
