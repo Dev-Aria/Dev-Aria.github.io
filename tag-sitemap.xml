@@ -324,22 +324,29 @@
     </url>
 
     <url>
+        <loc>http://nayoungkim0918.github.io/tags/Follow-Me/</loc>
+        <lastmod>2018-10-22T07:52:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://nayoungkim0918.github.io/tags/Java/</loc>
-        <lastmod>2018-10-21T08:09:53.000Z</lastmod>
+        <lastmod>2018-10-22T07:52:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://nayoungkim0918.github.io/tags/Web-Programming/</loc>
-        <lastmod>2018-10-21T08:09:53.000Z</lastmod>
+        <lastmod>2018-10-22T07:52:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/Follow-Me/</loc>
-        <lastmod>2018-10-21T08:09:53.000Z</lastmod>
+        <loc>http://nayoungkim0918.github.io/tags/HTML/</loc>
+        <lastmod>2018-10-22T07:52:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
