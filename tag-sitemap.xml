@@ -240,6 +240,20 @@
     </url>
 
     <url>
+        <loc>http://nayoungkim0918.github.io/tags/%EC%B6%9C%ED%8C%90/</loc>
+        <lastmod>2018-10-19T11:37:03.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/%EC%A0%80%EC%9E%90/</loc>
+        <lastmod>2018-10-19T11:37:03.471Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://nayoungkim0918.github.io/tags/jquery/</loc>
         <lastmod>2018-10-19T11:37:03.471Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -261,21 +275,7 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/%EC%B6%9C%ED%8C%90/</loc>
-        <lastmod>2018-10-19T11:37:03.471Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://nayoungkim0918.github.io/tags/%EC%9D%B4%EC%A7%80%EC%8A%A4%ED%8D%BC%EB%B8%94%EB%A6%AC%EC%8B%B1/</loc>
-        <lastmod>2018-10-19T11:37:03.471Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/%EC%A0%80%EC%9E%90/</loc>
         <lastmod>2018-10-19T11:37:03.471Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
