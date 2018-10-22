@@ -205,20 +205,6 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/Java/</loc>
-        <lastmod>2018-10-19T08:38:19.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/Web-Programming/</loc>
-        <lastmod>2018-10-19T08:38:19.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://nayoungkim0918.github.io/tags/Follow-Me-%EC%8B%9C%EB%A6%AC%EC%A6%88/</loc>
         <lastmod>2018-10-19T08:38:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -333,6 +319,34 @@
     <url>
         <loc>http://nayoungkim0918.github.io/tags/visual-studio-code/</loc>
         <lastmod>2018-10-20T17:06:56.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Java/</loc>
+        <lastmod>2018-10-21T19:44:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Web-Programming/</loc>
+        <lastmod>2018-10-21T19:44:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Follow-Me/</loc>
+        <lastmod>2018-10-21T19:44:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/HTML/</loc>
+        <lastmod>2018-10-21T19:44:56.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
