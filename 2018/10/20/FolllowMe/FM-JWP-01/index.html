@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>[Follow Me!] 01. 웹 프로그램의 개요 | Eunoia Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Follow Me,Java,Web Programming" />
+    
+    <meta name="description" content="01. 웹 프로그램의 개요1. 웹 어플리케이션이란 무엇인가?2. 자바 기반의 웹 어플리케이션은 무엇이 다른가?3. 웹 어플리케이션의 구조 및 동작 원리는 무엇인가?  1. 웹 어플리케이션이란 무엇인가?  웹(Web) 네트워크의 한 종류 HTTP 프로토콜 통신 EX 미국의 웹 사이트 내용을 웹 브라우저를 통해 볼 수 있는 이유 요청한 페이지를 미국의 웹 서버">
+<meta name="keywords" content="Follow Me,Java,Web Programming">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Follow Me!] 01. 웹 프로그램의 개요">
+<meta property="og:url" content="http://nayoungkim0918.github.io/2018/10/20/FolllowMe/FM-JWP-01/index.html">
+<meta property="og:site_name" content="Eunoia Blog">
+<meta property="og:description" content="01. 웹 프로그램의 개요1. 웹 어플리케이션이란 무엇인가?2. 자바 기반의 웹 어플리케이션은 무엇이 다른가?3. 웹 어플리케이션의 구조 및 동작 원리는 무엇인가?  1. 웹 어플리케이션이란 무엇인가?  웹(Web) 네트워크의 한 종류 HTTP 프로토콜 통신 EX 미국의 웹 사이트 내용을 웹 브라우저를 통해 볼 수 있는 이유 요청한 페이지를 미국의 웹 서버">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://user-images.githubusercontent.com/24776203/47257231-50434880-d4c6-11e8-8a82-9bb2584a827d.png">
+<meta property="og:updated_time" content="2018-10-20T08:09:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Follow Me!] 01. 웹 프로그램의 개요">
+<meta name="twitter:description" content="01. 웹 프로그램의 개요1. 웹 어플리케이션이란 무엇인가?2. 자바 기반의 웹 어플리케이션은 무엇이 다른가?3. 웹 어플리케이션의 구조 및 동작 원리는 무엇인가?  1. 웹 어플리케이션이란 무엇인가?  웹(Web) 네트워크의 한 종류 HTTP 프로토콜 통신 EX 미국의 웹 사이트 내용을 웹 브라우저를 통해 볼 수 있는 이유 요청한 페이지를 미국의 웹 서버">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/24776203/47257231-50434880-d4c6-11e8-8a82-9bb2584a827d.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Eunoia Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Study &amp; Programming for Web Programmer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">eunoia♥</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/categories/index.html">Category</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/tags/index.html">Tag</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Follow-Me/">Follow Me</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-FolllowMe/FM-JWP-01" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        [Follow Me!] 01. 웹 프로그램의 개요
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/20/FolllowMe/FM-JWP-01/" class="article-date">
+            <time datetime="2018-10-20T08:09:53.000Z" itemprop="datePublished">2018-10-20</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Follow-Me/">Follow Me</a>, <a class="tag-link" href="/tags/Java/">Java</a>, <a class="tag-link" href="/tags/Web-Programming/">Web Programming</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="01-웹-프로그램의-개요"><a href="#01-웹-프로그램의-개요" class="headerlink" title="01. 웹 프로그램의 개요"></a>01. 웹 프로그램의 개요</h2><h5 id="1-웹-어플리케이션이란-무엇인가"><a href="#1-웹-어플리케이션이란-무엇인가" class="headerlink" title="1. 웹 어플리케이션이란 무엇인가?"></a>1. 웹 어플리케이션이란 무엇인가?</h5><h5 id="2-자바-기반의-웹-어플리케이션은-무엇이-다른가"><a href="#2-자바-기반의-웹-어플리케이션은-무엇이-다른가" class="headerlink" title="2. 자바 기반의 웹 어플리케이션은 무엇이 다른가?"></a>2. 자바 기반의 웹 어플리케이션은 무엇이 다른가?</h5><h5 id="3-웹-어플리케이션의-구조-및-동작-원리는-무엇인가"><a href="#3-웹-어플리케이션의-구조-및-동작-원리는-무엇인가" class="headerlink" title="3. 웹 어플리케이션의 구조 및 동작 원리는 무엇인가?"></a>3. 웹 어플리케이션의 구조 및 동작 원리는 무엇인가?</h5><p><br><br> </p>
+<backdeepviolet>1. 웹 어플리케이션이란 무엇인가?</backdeepviolet>
+
+<h4 id="웹-Web"><a href="#웹-Web" class="headerlink" title="웹(Web)"></a>웹(Web)</h4><ul>
+<li>네트워크의 한 종류</li>
+<li>HTTP 프로토콜 통신<ul>
+<li><strong>EX</strong></li>
+<li>미국의 웹 사이트 내용을 웹 브라우저를 통해 볼 수 있는 이유</li>
+<li>요청한 페이지를 미국의 웹 서버로부터 HTTP 통신을 통해 전달받기 때문</li>
+</ul>
+</li>
+<li>관련 기술<ul>
+<li>웹 서버 구축 및 운영, 프로토콜 정책 관리, 인프라 구축 등<br><br></li>
+</ul>
+</li>
+</ul>
+<h4 id="웹-프로그램-웹-어플리케이션"><a href="#웹-프로그램-웹-어플리케이션" class="headerlink" title="웹 프로그램 = 웹 어플리케이션"></a>웹 프로그램 = 웹 어플리케이션</h4><ul>
+<li>웹(Web) 기반의 응용 소프트웨어를 의미하는 용어</li>
+<li>웹 환경에서 이용핳ㄹ 수 있는 다양한 기능을 제공하는 프로그램<ul>
+<li>게시판, SNS, 인터넷 쇼핑몰 등</li>
+</ul>
+</li>
+<li>단독으로 정상적인 실행 가능</li>
+<li>다른 어플리케이션과의 결합으로 프로그램 규모 확장 가능</li>
+<li>클라이언트(Client)의 요청과 서버(Server)의 응답으로 구성<ul>
+<li>클라이언트가 웹 브라우저의 주소 창에 원하는 웹 페이지의 URL 작성 후 [이동] 버튼 클릭</li>
+<li>URL에 작성된 주소로 요청 전달</li>
+<li>요청을 받은 웹 서버 안의 웹 어플리케이션에서 요청된 페이지 생성</li>
+<li>클라이언트에 응답(요청된 페이지) 전송<br><br></li>
+</ul>
+</li>
+</ul>
+<h4 id="URL-주소를-입력하고-Enter-키를-눌렀을-때의-내부-동작"><a href="#URL-주소를-입력하고-Enter-키를-눌렀을-때의-내부-동작" class="headerlink" title="URL 주소를 입력하고 [Enter] 키를 눌렀을 때의 내부 동작"></a>URL 주소를 입력하고 [Enter] 키를 눌렀을 때의 내부 동작</h4><ul>
+<li>웹 서버의 URL = 웹 어플리케이션의 접근 경로<ul>
+<li>각 어플리케이션의 구분 = 어플리케이션 마다 다른 경로 추가 가능</li>
+<li>하나의 웹 서버에는 여러 개의 웹 어플리케이션을 올릴 수 있음</li>
+</ul>
+</li>
+<li>웹 어플리케이션에 요청 전송<ul>
+<li><red>“URL주소/웹 어플리케이션 이름/요청할 페이지 경로”</red><ul>
+<li><strong>URL</strong> “http:// www. myserver. com” | <strong>웹 어플리케이션</strong> “app1” | <strong>요청할 페이지 경로</strong> “index.jsp” </li>
+<li><strong>“<a href="http://www.myserver.com/app1/index.jsp&quot;" target="_blank" rel="noopener">http://www.myserver.com/app1/index.jsp&quot;</a></strong><br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><backgreen>요청 받은 서버는 클라이언트가 원하는 페이지를 생성해 응답으로 보내준다.</backgreen></li>
+<li><p><backgreen>클라이언트 컴퓨터는 응답으로 받은 페이지를 웹 브라우저에 띄워준다.</backgreen><br><br></p>
+<p> <img src="https://user-images.githubusercontent.com/24776203/47257231-50434880-d4c6-11e8-8a82-9bb2584a827d.png" alt="[그림1] 클라이언트와 웹 서버의 통신"></p>
+</li>
+</ul>
+<p><br><br></p>
+<backdeepviolet>2. 자바 기반의 웹 어플리케이션은 무엇이 다른가?</backdeepviolet>
+
+<h4 id="웹-어플리케이션-구현-언어"><a href="#웹-어플리케이션-구현-언어" class="headerlink" title="웹 어플리케이션 구현 언어"></a>웹 어플리케이션 구현 언어</h4><ul>
+<li>ASP, PHP, JSP &amp; Servlet 등<br><br></li>
+</ul>
+<h4 id="스크립트-기반의-웹-어플리케이션"><a href="#스크립트-기반의-웹-어플리케이션" class="headerlink" title="스크립트 기반의 웹 어플리케이션"></a>스크립트 기반의 웹 어플리케이션</h4><ul>
+<li>웹 서비스 초창기에 사용</li>
+<li>CGI 스크립트언어<ul>
+<li>인터프리터 방식으로 실행<ul>
+<li>컴파일 결과를 저장하지 않고 실행할 때마다 새로 컴파일</li>
+<li><red>동시 접속</red>이 많아 <red>과부하</red> 발생<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="자바-기반의-웹-어플리케이션"><a href="#자바-기반의-웹-어플리케이션" class="headerlink" title="자바 기반의 웹 어플리케이션"></a>자바 기반의 웹 어플리케이션</h4><ul>
+<li>웹(Web), 모바일(Mobile)에서 많이 활용</li>
+<li>Java<ul>
+<li>컴파일 방식으로 실행<ul>
+<li>소스가 변경되지 않는 한 컴파일은 한번만 실행</li>
+<li>요청이 발ㄹ생할 때마다 컴파일된 결과 사용</li>
+</ul>
+</li>
+<li>플랫폼에 독립적(JVM)<ul>
+<li>동일한 코드는 운영 체제가 바뀌어 동일 동작</li>
+<li>네트워크로 연결된 다양한 종류의 디바이스에서 동일하게 동작<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<backgreen>인터프리터(Interpreter) VS 컴파일러(Compiler)</backgreen>
+
+<p>   <img src="https://user-images.githubusercontent.com/24776203/47254199-a8b02100-d499-11e8-93b2-9f94708284d6.png" alt="[그림2] interpreter와 Compiler의 비교"></p>
+<p><br><br></p>
+<backdeepviolet>3. 웹 어플리케이션의 구조 및 동작 원리는 무엇인가?</backdeepviolet>
+
+<h4 id="웹-어플리케이션의-동작"><a href="#웹-어플리케이션의-동작" class="headerlink" title="웹 어플리케이션의 동작"></a>웹 어플리케이션의 동작</h4><ul>
+<li><red>요청과 응답</red></li>
+<li><strong>클라이언트가 웹 어플리케이션에 요청을 보내는 방법</strong><ul>
+<li>주소가 나타내는 <strong>페이지 요청</strong> <strong>=</strong> 웹 브라우저에 주소를 작성해 [이동] 버튼을 클릭하는 것</li>
+<li>로그인 <strong>처리 요청</strong> <strong>=</strong> 로그인 폼에 아이디와 비밀번호를 입력하고, [로그인] 버튼을 클릭하는 것<br><br></li>
+</ul>
+</li>
+</ul>
+<h4 id="로그인-처리"><a href="#로그인-처리" class="headerlink" title="로그인 처리"></a>로그인 처리</h4><ul>
+<li>클라이언트가 로그인 폼에 아이디와 비밀번호 입력</li>
+<li>[로그인] 버튼 클릭 = <strong>로그인 요청을 웹 어플리케이션으로 전달</strong> (아이디, 비밀번호) 함께 전달</li>
+<li>로그인 성공 여부 확인 = 전달받은 폼 데이터와 <strong>DB에 저장된 정보를 비교</strong></li>
+<li>클라이언트한테 <strong>결과를 응답 페이지로 전송</strong><br><br></li>
+</ul>
+<h4 id="클라이언트와-서버로-분리된-작업"><a href="#클라이언트와-서버로-분리된-작업" class="headerlink" title="클라이언트와 서버로 분리된 작업"></a>클라이언트와 서버로 분리된 작업</h4><ul>
+<li><p><strong>클라이언트 사이드(Client-Side)</strong></p>
+<ul>
+<li>사용자의 입력 받기</li>
+<li>서버 쪽에서 처리한 결과를 사용자에게 보여주기</li>
+<li>뷰 페이지(View Page) 구현 - HTML, CSS, Javascript, JSP</li>
+</ul>
+</li>
+<li><p><strong>서버 사이드(Server-Side)</strong></p>
+<ul>
+<li>전달 받은 요청을 데이터베이스(DB)와 연동해 처리</li>
+<li>서블릿(Servlet) - 클라이언트의 요청을 받아 흐름을 제어하는 부분</li>
+<li>자바(JAVA) - 기능 구현 및 DB 처리 구현</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<p>   <img src="https://user-images.githubusercontent.com/24776203/47258199-b930bd80-d4d2-11e8-9b5a-936b7a0e2029.png" alt="[그림3] Client Side &amp; Server Side"></p>
+<p><br><br></p>
+<backdeepviolet>Plus+. 자바(Java)란 무엇인가?</backdeepviolet>
+
+<ul>
+<li>객체 지향적 프로그래밍 언어</li>
+<li>썬 마이크로시스템즈의 제임스 고슬링(James Gosling)과 연구원들의 개발</li>
+<li>독립적인 플랫폼(UNIX 기반 C언어와의 차이점)</li>
+<li>분산형 컴퓨팅 및 통신 환경에 알맞은 응용 프로그램 개발에 적합</li>
+<li>초기(가전제품 동작 프로그램)</li>
+<li>현재(웹 어플리케이션, 모바일 기기용 소프트웨어) </li>
+</ul>
+<p><br><br><br><br></p>
+<hr>
+
+<p> <strong>다음 포스트 : <a href="https://nayoungkim0918.github.io/2018/10/22/FolllowMe/FM-JWP-02-1/">02-1. HTML의 기본</a></strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://nayoungkim0918.github.io/2018/10/20/FolllowMe/FM-JWP-01/" data-id="cjnja7eq5002b2wv7pch70ihq" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>Follow:</p>        
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/nayoungkim0918" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/watch?v=KITALm0-NTc" target="_blank" rel="noopener">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/10/21/FolllowMe/FM-JWP-02-1/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">after</strong>
+        <p class="article-nav-title">
+        
+            [Follow Me!][HTML] 02-1. HTML의 기본
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/10/19/FolllowMe/FM-JWP-00-Start/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">before</strong>
+        <p class="article-nav-title">[Follow Me!] 초급.중급자를 위한 Java Web Programming</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">15</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/">Follow Me</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/22/FolllowMe/FM-JWP-02-2/" class="title">[Follow Me!][HTML] 02-2. 제목 달기와 단락으로 묶기</a></p>
+                            <p class="item-date"><time datetime="2018-10-21T19:44:56.000Z" itemprop="datePublished">2018-10-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/21/FolllowMe/FM-JWP-02-1/" class="title">[Follow Me!][HTML] 02-1. HTML의 기본</a></p>
+                            <p class="item-date"><time datetime="2018-10-21T07:52:10.000Z" itemprop="datePublished">2018-10-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/20/FolllowMe/FM-JWP-01/" class="title">[Follow Me!] 01. 웹 프로그램의 개요</a></p>
+                            <p class="item-date"><time datetime="2018-10-20T08:09:53.000Z" itemprop="datePublished">2018-10-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/19/FolllowMe/FM-JWP-00-Start/" class="title">[Follow Me!] 초급.중급자를 위한 Java Web Programming</a></p>
+                            <p class="item-date"><time datetime="2018-10-19T08:38:19.000Z" itemprop="datePublished">2018-10-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/10/18/Do-It/Do-It-04-2/" class="title">[Do It!] 04-2. 내장 객체</a></p>
+                            <p class="item-date"><time datetime="2018-10-18T13:33:57.000Z" itemprop="datePublished">2018-10-18</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">기록 보관소</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 18.33px;">Do_It</a> <a href="/tags/Follow-Me/" style="font-size: 13.33px;">Follow Me</a> <a href="/tags/Follow-Me-시리즈/" style="font-size: 10px;">Follow Me 시리즈</a> <a href="/tags/Follow-Me-초급-중급자를-위한-Java-Web-Programming/" style="font-size: 10px;">Follow Me! 초급.중급자를 위한 Java Web Programming</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Mission/" style="font-size: 11.67px;">Mission</a> <a href="/tags/Web-Programming/" style="font-size: 15px;">Web Programming</a> <a href="/tags/break/" style="font-size: 10px;">break</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/continue/" style="font-size: 10px;">continue</a> <a href="/tags/do-while/" style="font-size: 10px;">do while</a> <a href="/tags/else/" style="font-size: 10px;">else</a> <a href="/tags/else-if/" style="font-size: 10px;">else if</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 16.67px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 13.33px;">start</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/while/" style="font-size: 10px;">while</a> <a href="/tags/객체/" style="font-size: 11.67px;">객체</a> <a href="/tags/김유진/" style="font-size: 10px;">김유진</a> <a href="/tags/내장-객체/" style="font-size: 10px;">내장 객체</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/선택문/" style="font-size: 10px;">선택문</a> <a href="/tags/아티오-ArtStudio/" style="font-size: 10px;">아티오-ArtStudio</a> <a href="/tags/연산자/" style="font-size: 10px;">연산자</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 11.67px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/제어문/" style="font-size: 15px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/중첩-for/" style="font-size: 10px;">중첩 for</a> <a href="/tags/중첩-if/" style="font-size: 10px;">중첩 if</a> <a href="/tags/총-정리-실습/" style="font-size: 10px;">총 정리 실습</a> <a href="/tags/출판/" style="font-size: 11.67px;">출판</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">링크</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://google.com">Google</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://naver.com">Naver</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit" style="padding: 10px;">
+                <div class="logo-wrap" style="width: 50%; float: left;">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div style="width: 50%; float: left; padding-top: 20px;">
+                    <p>&copy; 2018 Nayoung kim</p>
+                    <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+                </div>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://nayoungkim0918.github.io/2018/10/20/FolllowMe/FM-JWP-01/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
