@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>[Do It!] 04-3. 브라우저 객체 모델 | Eunoia Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Do_It,javascript,html,객체,브라우저 객체 모델" />
+    
+    <meta name="description" content="04. 객체04-3. 브라우저 객체 모델1. 브라우저 객체란?                  바로가기2. window 객체                      바로가기3. 일정한 시간 간격으로 코드 실행하기 바로가기4. screen 객체                      바로가기5. loaction 객체                    바로가기6.">
+<meta name="keywords" content="Do_It,javascript,html,객체,브라우저 객체 모델">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Do It!] 04-3. 브라우저 객체 모델">
+<meta property="og:url" content="http://nayoungkim0918.github.io/2018/10/28/Do-It/Do-It-04-3/index.html">
+<meta property="og:site_name" content="Eunoia Blog">
+<meta property="og:description" content="04. 객체04-3. 브라우저 객체 모델1. 브라우저 객체란?                  바로가기2. window 객체                      바로가기3. 일정한 시간 간격으로 코드 실행하기 바로가기4. screen 객체                      바로가기5. loaction 객체                    바로가기6.">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://user-images.githubusercontent.com/24776203/47444068-9fec8180-d7f0-11e8-8c20-46cdf6e65f3e.png">
+<meta property="og:updated_time" content="2018-10-27T15:30:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Do It!] 04-3. 브라우저 객체 모델">
+<meta name="twitter:description" content="04. 객체04-3. 브라우저 객체 모델1. 브라우저 객체란?                  바로가기2. window 객체                      바로가기3. 일정한 시간 간격으로 코드 실행하기 바로가기4. screen 객체                      바로가기5. loaction 객체                    바로가기6.">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/24776203/47444068-9fec8180-d7f0-11e8-8c20-46cdf6e65f3e.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Eunoia Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Study &amp; Programming for Web Programmer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">eunoia♥</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/categories/index.html">Category</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/tags/index.html">Tag</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Do-It/">Do It</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/4장-객체/">4장. 객체</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Do-It/Do-It-04-3" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        [Do It!] 04-3. 브라우저 객체 모델
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/28/Do-It/Do-It-04-3/" class="article-date">
+            <time datetime="2018-10-27T15:30:21.000Z" itemprop="datePublished">2018-10-28</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Do-It/">Do_It</a>, <a class="tag-link" href="/tags/html/">html</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>, <a class="tag-link" href="/tags/객체/">객체</a>, <a class="tag-link" href="/tags/브라우저-객체-모델/">브라우저 객체 모델</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="04-객체"><a href="#04-객체" class="headerlink" title="04. 객체"></a>04. 객체</h1><h2 id="04-3-브라우저-객체-모델"><a href="#04-3-브라우저-객체-모델" class="headerlink" title="04-3. 브라우저 객체 모델"></a>04-3. 브라우저 객체 모델</h2><h5 id="1-브라우저-객체란-바로가기"><a href="#1-브라우저-객체란-바로가기" class="headerlink" title="1. 브라우저 객체란?                  바로가기"></a>1. 브라우저 객체란?                  <a href="#1">바로가기</a></h5><h5 id="2-window-객체-바로가기"><a href="#2-window-객체-바로가기" class="headerlink" title="2. window 객체                      바로가기"></a>2. window 객체                      <a href="#2">바로가기</a></h5><h5 id="3-일정한-시간-간격으로-코드-실행하기-바로가기"><a href="#3-일정한-시간-간격으로-코드-실행하기-바로가기" class="headerlink" title="3. 일정한 시간 간격으로 코드 실행하기 바로가기"></a>3. 일정한 시간 간격으로 코드 실행하기 <a href="#3">바로가기</a></h5><h5 id="4-screen-객체-바로가기"><a href="#4-screen-객체-바로가기" class="headerlink" title="4. screen 객체                      바로가기"></a>4. screen 객체                      <a href="#4">바로가기</a></h5><h5 id="5-loaction-객체-바로가기"><a href="#5-loaction-객체-바로가기" class="headerlink" title="5. loaction 객체                    바로가기"></a>5. loaction 객체                    <a href="#5">바로가기</a></h5><h5 id="6-history-객체-바로가기"><a href="#6-history-객체-바로가기" class="headerlink" title="6. history 객체                     바로가기"></a>6. history 객체                     <a href="#6">바로가기</a></h5><h5 id="7-navigator-객체-바로가기"><a href="#7-navigator-객체-바로가기" class="headerlink" title="7. navigator 객체                   바로가기"></a>7. navigator 객체                   <a href="#7">바로가기</a></h5><p><br><br> </p>
+<backdeepviolet id="1">1. 브라우저 객체란?</backdeepviolet>
+
+<ul>
+<li><p><strong>브라우저 객체 모델(BOM, Browser Object Model)</strong></p>
+<ul>
+<li><strong>계층적 구조</strong> 로 설계된 <strong>브라우저 객체</strong></li>
+<li><p>브라우저 객체: 브라우저에 내장된 객체</p>
+<ul>
+<li>window<ul>
+<li>Browser 객체의 최상위 객체</li>
+<li>하위 객체 포함<ul>
+<li>document, screen, location, history, navigator</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47444068-9fec8180-d7f0-11e8-8c20-46cdf6e65f3e.png" alt="[그림1] browser 객체의 계층적 구조"><br><br><br> </p>
+</li>
+</ul>
+</li>
+</ul>
+<backdeepviolet id="2">2. window 객체</backdeepviolet>
+
+<h4 id="브라우저-객체의-최상위-객체"><a href="#브라우저-객체의-최상위-객체" class="headerlink" title="브라우저 객체의 최상위 객체"></a>브라우저 객체의 최상위 객체</h4><ul>
+<li>window 객체의 메서드<ul>
+<li>open(), alert(), prompt(), confirm(), moveTo(), resizeTo(), setInterval(), setTimeout()</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47471175-1d8dad00-d844-11e8-9b15-7de515dba321.png" alt="[그림2] window 객체의 메서드 종류"><br><br></p>
+<h4 id="window-open"><a href="#window-open" class="headerlink" title="window.open()"></a>window.open()</h4><ul>
+<li><strong>팝업 창</strong></li>
+<li>지정한 URL 페이지를 새 브라우저 창에 나타내기</li>
+<li>팝업창 제작에 용이<ul>
+<li>광고에 사용 가능하나, 팝업 차단이 가능하므로 사용하지 않는 추세</li>
+</ul>
+</li>
+<li>open() 메서드의 옵션<ul>
+<li>width, height, left, top, scrollbars, location, status, toolbars</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><backviolet>window.open() 기본형<backviolet></backviolet></backviolet></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">open(<span class="string">"URL"</span>, <span class="string">"새 창 이름"</span>, <span class="string">"새 창 옵션"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.open(<span class="string">"http://www.naver.com/"</span>,  <span class="comment">//URL</span></span><br><span class="line">            <span class="string">"naver"</span>,                  <span class="comment">//이름</span></span><br><span class="line">            <span class="string">"width=350, height=400, left=50, top=10, scrollbars=no"</span>); <span class="comment">//옵션</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/24776203/47478598-dbc12e80-d864-11e8-9de4-1d97174535f2.png" alt="[그림3] open() 메서드의 옵션 종류"><br><br></p>
+</li>
+</ul>
+<ul>
+<li><backviolet>window.open() 예제</backviolet>
+
+  <figure class="highlight javascript"><figcaption><span>04_3_bom_ex1_window_open.html   </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="built_in">window</span>.open(<span class="string">"test_newpage.html"</span>, </span><br><span class="line">              <span class="string">"pop1"</span>, </span><br><span class="line">              <span class="string">"width=350, height=450, \left=300, top=50"</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight html"><figcaption><span>test_newpage.html   </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>window.open()<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/window_object_1.jpg"</span> <span class="attr">usemap</span>=<span class="string">"#intro"</span> <span class="attr">alt</span>=<span class="string">"신간 책 소개"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">map</span> <span class="attr">name</span>=<span class="string">"intro"</span> <span class="attr">id</span>=<span class="string">"intro"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">"rect"</span> <span class="attr">coords</span>=<span class="string">"2320,368,280,390"</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">alt</span>=<span class="string">"창 닫기"</span> <span class="attr">onclick</span>=<span class="string">"window.close();"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> <img src="https://user-images.githubusercontent.com/24776203/47497549-6883e080-d895-11e8-8fd8-3c5a2397063b.png" alt="[그림4] window.open() 예제 실행 결과"><br><br></p>
+</li>
+</ul>
+<h4 id="alert"><a href="#alert" class="headerlink" title="alert()"></a>alert()</h4><ul>
+<li><strong>경고 창</strong></li>
+<li>window 객체를 따로 작성하지 않아도 사용 가능</li>
+</ul>
+<ul>
+<li><p><backviolet>alert() 기본형<backviolet></backviolet></backviolet></p>
+<ul>
+<li>window.alert()와 alert()의 기능이 같은 것 확인<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"경고 메세지"</span>);</span><br><span class="line"></span><br><span class="line">alert(<span class="string">"잘못 입력했습니다."</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.alert(<span class="string">"window 객체 사용"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47498164-61f66880-d897-11e8-9334-d87fcf8627f4.png" alt="[그림5] alert() 기본형"><br><br></p>
+</li>
+</ul>
+<h4 id="prompt"><a href="#prompt" class="headerlink" title="prompt()"></a>prompt()</h4><ul>
+<li><strong>질의응답 창</strong></li>
+<li>window 객체를 따로 작성하지 않아도 사용 가능</li>
+<li>[확인] 클릭 시, 입력한 답변 반환</li>
+</ul>
+<ul>
+<li><p><backviolet>prompt() 기본형<backviolet></backviolet></backviolet></p>
+<ul>
+<li>window.prompt()와 prompt()의 기능이 같은 것 확인<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">prompt(<span class="string">"질의 내용"</span>, <span class="string">"기본 답변"</span>);</span><br><span class="line"></span><br><span class="line">prompt(<span class="string">"당신의 연령은?"</span>, <span class="string">"0"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.prompt(<span class="string">"당신의 연령은?"</span>, <span class="string">"26"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47498851-691e7600-d899-11e8-8544-df78b89adc48.png" alt="[그림6] prompt() 기본형"><br><br></p>
+</li>
+</ul>
+<h4 id="confirm"><a href="#confirm" class="headerlink" title="confirm()"></a>confirm()</h4><ul>
+<li><strong>확인/취소 창</strong></li>
+<li>window 객체를 따로 작성하지 않아도 사용 가능</li>
+<li>[확인] 클릭 시, true 반환</li>
+<li>[취소] 클릭 시, false 반환</li>
+</ul>
+<ul>
+<li><p><backviolet>confirm() 기본형<backviolet></backviolet></backviolet></p>
+<ul>
+<li>window.confirm()와 confirm()의 기능이 같은 것 확인<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">confirm(<span class="string">"질의 내용"</span>);</span><br><span class="line"></span><br><span class="line">confirm(<span class="string">"정말로 삭제하시겠습니까?"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.confirm(<span class="string">"당신은 초콜렛을 좋아합니까?"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47499290-8f90e100-d89a-11e8-80d2-9dcfb995d8ec.png" alt="[그림7] confirm() 기본형"><br><br><br> </p>
+</li>
+</ul>
+<backdeepviolet id="3">3. 일정한 시간 간격으로 코드 실행하기</backdeepviolet>
+
+<ul>
+<li><p><backviolet> 기본형<backviolet></backviolet></backviolet></p>
+</li>
+<li><backviolet> 예제</backviolet>
+
+
+</li>
+</ul>
+<pre><code><figure class="highlight javascript"><figcaption><span>04_3_bom_ex1_.html   </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre><p>   <img src="" alt="[그림8]  예제 실행 결과"></p>
+<h4 id="setInterval-clearInterval"><a href="#setInterval-clearInterval" class="headerlink" title="setInterval()/ clearInterval()"></a>setInterval()/ clearInterval()</h4><ul>
+<li><ul>
+<li><backviolet>setInterval()/ clearInterval() 기본형<backviolet></backviolet></backviolet></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><backviolet>setInterval()/ clearInterval() 예제<backviolet></backviolet></backviolet></p>
+<figure class="highlight javascript"><figcaption><span>04_3_bom_ex2_window_setInterval.html </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+<p><img src="" alt="[그림9] setInterval()/ clearInterval() 예제 실행 결과"><br><br></p>
+</li>
+</ul>
+<h4 id="setTimeout-clearTimeout"><a href="#setTimeout-clearTimeout" class="headerlink" title="setTimeout()/ clearTimeout()"></a>setTimeout()/ clearTimeout()</h4><ul>
+<li><ul>
+<li><backviolet>setTimeout()/ clearTimeout() 기본형<backviolet></backviolet></backviolet></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><backviolet>setTimeout()/ clearTimeout() 예제<backviolet></backviolet></backviolet></p>
+<figure class="highlight javascript"><figcaption><span>04_3_bom_ex3_window_setTimeout.html </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+<p><img src="" alt="[그림10] setTimeout()/ clearTimeout() 예제 실행 결과"><br><br><br> </p>
+</li>
+</ul>
+<backdeepviolet id="4">4. screen 객체</backdeepviolet>
+
+<ul>
+<li><p><backviolet>screen 기본형<backviolet></backviolet></backviolet></p>
+<p> <img src="https://user-images.githubusercontent.com/24776203/47515146-09d25d00-d8bd-11e8-841b-6d5658d31365.png" alt="[그림11] screen 객체 속성 종류"><br><br>   </p>
+</li>
+<li><backviolet>screen 예제</backviolet>
+
+
+</li>
+</ul>
+<pre><code><figure class="highlight javascript"><figcaption><span>04_3_bom_ex4_screen.html   </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre><p>   <img src="" alt="[그림12] screen 예제 실행 결과"></p>
+<p><br><br> </p>
+<backdeepviolet id="5">5. loaction 객체</backdeepviolet>
+
+<ul>
+<li><backviolet>loaction 기본형<backviolet></backviolet></backviolet></li>
+</ul>
+<p>   <img src="https://user-images.githubusercontent.com/24776203/47515147-0a6af380-d8bd-11e8-8746-1e599d63d642.png" alt="[그림13] loaction 객체 속성 종류"><br><br>   </p>
+<ul>
+<li><backviolet>loaction 예제</backviolet>
+
+
+</li>
+</ul>
+<pre><code><figure class="highlight javascript"><figcaption><span>04_3_bom_ex5_loaction.html   </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre><p>   <img src="" alt="[그림14] loaction 예제 실행 결과"></p>
+<p><br><br> </p>
+<backdeepviolet id="6">6. history 객체</backdeepviolet>
+
+<ul>
+<li><backviolet>history 기본형<backviolet></backviolet></backviolet></li>
+</ul>
+<p>   <img src="https://user-images.githubusercontent.com/24776203/47515148-0a6af380-d8bd-11e8-9545-b85b8e6d9b6b.png" alt="[그림15] history 객체 속성 종류"><br><br>   </p>
+<ul>
+<li><backviolet>history 예제</backviolet>
+
+
+</li>
+</ul>
+<pre><code><figure class="highlight javascript"><figcaption><span>04_3_bom_ex6_history.html   </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre><p>   <img src="" alt="[그림16] history 예제 실행 결과"></p>
+<p><br><br> </p>
+<backdeepviolet id="7">7. navigator 객체</backdeepviolet>
+
+<ul>
+<li><backviolet>navigator 기본형<backviolet></backviolet></backviolet></li>
+</ul>
+<p>   <img src="https://user-images.githubusercontent.com/24776203/47515149-0a6af380-d8bd-11e8-9cdb-600b912706d5.png" alt="[그림17] navigator 객체 속성 종류"><br><br>   </p>
+<ul>
+<li><backviolet>navigator 예제</backviolet>
+
+
+</li>
+</ul>
+<pre><code><figure class="highlight javascript"><figcaption><span>04_3_bom_ex7_navigator.html   </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre><p>   <img src="" alt="[그림18] navigator 예제 실행 결과"></p>
+<p><br><br> </p>
+<p><br><br><br><br></p>
+<hr>
+
+<p> <strong>이전 포스트 : <a href="https://nayoungkim0918.github.io/2018/10/18/Do-It/Do-It-04-2/">04-2. 내장 객체</a></strong></p>
+<hr>
+
+<p><strong>다음 포스트 : <a href="https://nayoungkim0918.github.io/">04-4. 총정리 실습!</a></strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://nayoungkim0918.github.io/2018/10/28/Do-It/Do-It-04-3/" data-id="cjnnbv7js001v6wv7c4r9yas9" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>Follow:</p>        
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/nayoungkim0918" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/watch?v=KITALm0-NTc" target="_blank" rel="noopener">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/10/26/FolllowMe/FM-JWP-02-5/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">before</strong>
+        <p class="article-nav-title">[Follow Me!] 02-5. 테이블</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/1장-JS-시작하기/">1장. JS 시작하기</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/2장-JS-기초문법/">2장. JS 기초문법</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/3장-제어문/">3장. 제어문</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/4장-객체/">4장. 객체</a><span class="category-list-count">3</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/">Follow Me</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/2장-HTML/">2장. HTML</a><span class="category-list-count">5</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/10/28/Do-It/Do-It-04-3/" class="title">[Do It!] 04-3. 브라우저 객체 모델</a></p>
+                            <p class="item-date"><time datetime="2018-10-27T15:30:21.000Z" itemprop="datePublished">2018-10-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/26/FolllowMe/FM-JWP-02-5/" class="title">[Follow Me!] 02-5. 테이블</a></p>
+                            <p class="item-date"><time datetime="2018-10-26T05:53:28.000Z" itemprop="datePublished">2018-10-26</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/24/FolllowMe/FM-JWP-02-4/" class="title">[Follow Me!] 02-4. 페이지 이동과 이미지 출력, 리스트 출력</a></p>
+                            <p class="item-date"><time datetime="2018-10-24T05:53:28.000Z" itemprop="datePublished">2018-10-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/23/FolllowMe/FM-JWP-02-3/" class="title">[Follow Me!] 02-3. 스타일</a></p>
+                            <p class="item-date"><time datetime="2018-10-23T03:15:04.000Z" itemprop="datePublished">2018-10-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/22/FolllowMe/FM-JWP-02-2/" class="title">[Follow Me!] 02-2. 제목 달기와 단락으로 묶기</a></p>
+                            <p class="item-date"><time datetime="2018-10-21T19:44:56.000Z" itemprop="datePublished">2018-10-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">기록 보관소</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 18.89px;">Do_It</a> <a href="/tags/Follow-Me/" style="font-size: 15.56px;">Follow Me</a> <a href="/tags/Follow-Me-시리즈/" style="font-size: 10px;">Follow Me 시리즈</a> <a href="/tags/Follow-Me-초급-중급자를-위한-Java-Web-Programming/" style="font-size: 10px;">Follow Me! 초급.중급자를 위한 Java Web Programming</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/HTML/" style="font-size: 14.44px;">HTML</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Mission/" style="font-size: 11.11px;">Mission</a> <a href="/tags/Web-Programming/" style="font-size: 16.67px;">Web Programming</a> <a href="/tags/break/" style="font-size: 10px;">break</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/continue/" style="font-size: 10px;">continue</a> <a href="/tags/do-while/" style="font-size: 10px;">do while</a> <a href="/tags/else/" style="font-size: 10px;">else</a> <a href="/tags/else-if/" style="font-size: 10px;">else if</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 17.78px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12.22px;">start</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/while/" style="font-size: 10px;">while</a> <a href="/tags/객체/" style="font-size: 12.22px;">객체</a> <a href="/tags/김유진/" style="font-size: 10px;">김유진</a> <a href="/tags/내장-객체/" style="font-size: 10px;">내장 객체</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/브라우저-객체-모델/" style="font-size: 10px;">브라우저 객체 모델</a> <a href="/tags/선택문/" style="font-size: 10px;">선택문</a> <a href="/tags/아티오-ArtStudio/" style="font-size: 10px;">아티오-ArtStudio</a> <a href="/tags/연산자/" style="font-size: 10px;">연산자</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 11.11px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/제어문/" style="font-size: 13.33px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/중첩-for/" style="font-size: 10px;">중첩 for</a> <a href="/tags/중첩-if/" style="font-size: 10px;">중첩 if</a> <a href="/tags/총-정리-실습/" style="font-size: 10px;">총 정리 실습</a> <a href="/tags/출판/" style="font-size: 11.11px;">출판</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">링크</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://google.com">Google</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://naver.com">Naver</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit" style="padding: 10px;">
+                <div class="logo-wrap" style="width: 50%; float: left;">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div style="width: 50%; float: left; padding-top: 20px;">
+                    <p>&copy; 2018 Nayoung kim</p>
+                    <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+                </div>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://nayoungkim0918.github.io/2018/10/28/Do-It/Do-It-04-3/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

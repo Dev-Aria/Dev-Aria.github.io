@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>[Follow Me!] 02-5. 테이블 | Eunoia Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Java,Web Programming,Follow Me,HTML" />
+    
+    <meta name="description" content="02. 웹 페이지의 기본 뼈대 HTML0. 개념1. HTML의 기본2. 제목 달기와 단락으로 묶기3. 스타일4. 페이지 이동과 이미지 출력, 리스트 출력5. 테이블6. 폼 양식 만들기7. 블록8. iframe  02-5. 테이블  1. 테이블 표 출력 table: 테이블 정의 tr = 행, 줄 = row td = 열, 칸 = column   화면의 레이아웃">
+<meta name="keywords" content="Java,Web Programming,Follow Me,HTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Follow Me!] 02-5. 테이블">
+<meta property="og:url" content="http://nayoungkim0918.github.io/2018/10/26/FolllowMe/FM-JWP-02-5/index.html">
+<meta property="og:site_name" content="Eunoia Blog">
+<meta property="og:description" content="02. 웹 페이지의 기본 뼈대 HTML0. 개념1. HTML의 기본2. 제목 달기와 단락으로 묶기3. 스타일4. 페이지 이동과 이미지 출력, 리스트 출력5. 테이블6. 폼 양식 만들기7. 블록8. iframe  02-5. 테이블  1. 테이블 표 출력 table: 테이블 정의 tr = 행, 줄 = row td = 열, 칸 = column   화면의 레이아웃">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://user-images.githubusercontent.com/24776203/47431586-18dedf80-d7d7-11e8-9b60-3c2ffa87d013.png">
+<meta property="og:updated_time" content="2018-10-26T05:53:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Follow Me!] 02-5. 테이블">
+<meta name="twitter:description" content="02. 웹 페이지의 기본 뼈대 HTML0. 개념1. HTML의 기본2. 제목 달기와 단락으로 묶기3. 스타일4. 페이지 이동과 이미지 출력, 리스트 출력5. 테이블6. 폼 양식 만들기7. 블록8. iframe  02-5. 테이블  1. 테이블 표 출력 table: 테이블 정의 tr = 행, 줄 = row td = 열, 칸 = column   화면의 레이아웃">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/24776203/47431586-18dedf80-d7d7-11e8-9b60-3c2ffa87d013.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Eunoia Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Study &amp; Programming for Web Programmer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">eunoia♥</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/categories/index.html">Category</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/tags/index.html">Tag</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Follow-Me/">Follow Me</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Follow-Me/Java-Web-Programming/2장-HTML/">2장. HTML</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-FolllowMe/FM-JWP-02-5" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        [Follow Me!] 02-5. 테이블
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/26/FolllowMe/FM-JWP-02-5/" class="article-date">
+            <time datetime="2018-10-26T05:53:28.000Z" itemprop="datePublished">2018-10-26</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Follow-Me/">Follow Me</a>, <a class="tag-link" href="/tags/HTML/">HTML</a>, <a class="tag-link" href="/tags/Java/">Java</a>, <a class="tag-link" href="/tags/Web-Programming/">Web Programming</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="02-웹-페이지의-기본-뼈대-HTML"><a href="#02-웹-페이지의-기본-뼈대-HTML" class="headerlink" title="02. 웹 페이지의 기본 뼈대 HTML"></a>02. 웹 페이지의 기본 뼈대 HTML</h2><h5 id="0-개념"><a href="#0-개념" class="headerlink" title="0. 개념"></a>0. 개념</h5><h5 id="1-HTML의-기본"><a href="#1-HTML의-기본" class="headerlink" title="1. HTML의 기본"></a>1. HTML의 기본</h5><h5 id="2-제목-달기와-단락으로-묶기"><a href="#2-제목-달기와-단락으로-묶기" class="headerlink" title="2. 제목 달기와 단락으로 묶기"></a>2. 제목 달기와 단락으로 묶기</h5><h5 id="3-스타일"><a href="#3-스타일" class="headerlink" title="3. 스타일"></a>3. 스타일</h5><h5 id="4-페이지-이동과-이미지-출력-리스트-출력"><a href="#4-페이지-이동과-이미지-출력-리스트-출력" class="headerlink" title="4. 페이지 이동과 이미지 출력, 리스트 출력"></a>4. 페이지 이동과 이미지 출력, 리스트 출력</h5><h5 id="5-테이블"><a href="#5-테이블" class="headerlink" title="5. 테이블"></a>5. 테이블</h5><h5 id="6-폼-양식-만들기"><a href="#6-폼-양식-만들기" class="headerlink" title="6. 폼 양식 만들기"></a>6. 폼 양식 만들기</h5><h5 id="7-블록"><a href="#7-블록" class="headerlink" title="7. 블록"></a>7. 블록</h5><h5 id="8-iframe"><a href="#8-iframe" class="headerlink" title="8. iframe"></a>8. iframe</h5><p><br><br> </p>
+<backdeepviolet>02-5. 테이블</backdeepviolet>
+
+<h4 id="1-테이블"><a href="#1-테이블" class="headerlink" title="1. 테이블"></a>1. 테이블</h4><ul>
+<li><strong>표</strong> 출력<ul>
+<li>table: 테이블 정의</li>
+<li>tr = 행, 줄 = row</li>
+<li>td = 열, 칸 = column</li>
+</ul>
+</li>
+<li>화면의 <strong>레이아웃</strong> 제작<ul>
+<li>화면 분할  </li>
+</ul>
+</li>
+<li><p><strong>style</strong></p>
+<ul>
+<li>테두리두께: border: 미지정시 0</li>
+<li>크기: width, height: 미지정시 내용크기 만큼<br><br></li>
+</ul>
+</li>
+<li><p><backgreen>table 기본형</backgreen> </p>
+<figure class="highlight html"><figcaption><span>02_5_html_table1.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">style</span>=<span class="string">"width:300px; height:200px; text-align: center;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span>                <span class="comment">&lt;!-- 줄, 행 --&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>1행 1열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>   <span class="comment">&lt;!-- 칸 --&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>1행 2열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>1행 3열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span>                <span class="comment">&lt;!-- 줄, 행 --&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>2행 1열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>   <span class="comment">&lt;!-- 칸 --&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>2행 2열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>2행 3열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span>                <span class="comment">&lt;!-- 줄, 행 --&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>3행 1열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>   <span class="comment">&lt;!-- 칸 --&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>3행 2열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>3행 3열<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47431586-18dedf80-d7d7-11e8-9b60-3c2ffa87d013.png" alt="[그림1] table 기본형"><br><br><br></p>
+<h4 id="2-테이블에-제목-줄과-캡션-추가하기"><a href="#2-테이블에-제목-줄과-캡션-추가하기" class="headerlink" title="2. 테이블에 제목 줄과 캡션 추가하기"></a>2. 테이블에 제목 줄과 캡션 추가하기</h4><ul>
+<li><strong>제목</strong> 출력: <strong>th</strong> 태그: 진한 글씨</li>
+<li><p><strong>캡션</strong> 달기: <strong>caption</strong> 태그<br><br></p>
+</li>
+<li><p><backviolet>table 제목, 캡션</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_5_html_table2.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>table 제목, 캡션<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">style</span>=<span class="string">"width:300px; height:200px; text-align: center;"</span>&gt;</span>                </span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">caption</span>&gt;</span>table 제목, 캡션<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>                  </span><br><span class="line">          <span class="tag">&lt;<span class="name">th</span>&gt;</span>name<span class="tag">&lt;/<span class="name">th</span>&gt;</span>       </span><br><span class="line">          <span class="tag">&lt;<span class="name">th</span>&gt;</span>tel<span class="tag">&lt;/<span class="name">th</span>&gt;</span>        </span><br><span class="line">          <span class="tag">&lt;<span class="name">th</span>&gt;</span>address<span class="tag">&lt;/<span class="name">th</span>&gt;</span>           </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">          <span class="tag">&lt;<span class="name">td</span>&gt;</span>Eunoia<span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">          <span class="tag">&lt;<span class="name">td</span>&gt;</span>010 - 1234- 5678<span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">          <span class="tag">&lt;<span class="name">td</span>&gt;</span>대한민국 서울특별시<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47431587-19777600-d7d7-11e8-9aa0-b2223a660e17.png" alt="[그림2] table 제목, 캡션"><br><br><br></p>
+<h4 id="3-칸-합치기-셀-병합"><a href="#3-칸-합치기-셀-병합" class="headerlink" title="3. 칸 합치기(셀 병합)"></a>3. 칸 합치기(셀 병합)</h4><ul>
+<li>가로: td: colspan=”합칠 칸의 수”</li>
+<li><p>세로: td: rowspan=”합칠 칸의 수”<br><br></p>
+</li>
+<li><p><backviolet>table 셀 병합</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_5_html_table3.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>table 셀 병합<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>가로 셀 병합<span class="tag">&lt;/<span class="name">h4</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">style</span>=<span class="string">"width:300px; height:200px; text-align: center;"</span>&gt;</span>                </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>  </span><br><span class="line">          <span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">"2"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">          <span class="tag">&lt;<span class="name">td</span>&gt;</span>B<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">          <span class="tag">&lt;<span class="name">td</span>&gt;</span>C<span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">          <span class="tag">&lt;<span class="name">td</span>&gt;</span>D<span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">          <span class="tag">&lt;<span class="name">td</span>&gt;</span>E<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>세로 셀 병합<span class="tag">&lt;/<span class="name">h4</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">style</span>=<span class="string">"width:300px; height:200px; text-align: center;"</span>&gt;</span>                </span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>B<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>C<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>D<span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>E<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47433328-357d1680-d7db-11e8-8614-14e53dc4fa2b.png" alt="[그림3] table 셀 병합"><br><br><br></p>
+<h4 id="4-테이블에-이미지-출력"><a href="#4-테이블에-이미지-출력" class="headerlink" title="4. 테이블에 이미지 출력"></a>4. 테이블에 이미지 출력</h4><ul>
+<li>가로: td: colspan=”합칠 칸의 수”</li>
+<li><p>세로: td: rowspan=”합칠 칸의 수”<br><br></p>
+</li>
+<li><p><backviolet>table 이미지 출력</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_5_html_table4.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>table 이미지 출력<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">style</span>=<span class="string">"width:300px; height:200px;"</span>&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;<span class="name">caption</span>&gt;</span>사진목록<span class="tag">&lt;/<span class="name">caption</span>&gt;</span>      </span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">style</span>=<span class="string">"text-align: center;"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>사진1<span class="tag">&lt;/<span class="name">th</span>&gt;</span>     </span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>사진2<span class="tag">&lt;/<span class="name">th</span>&gt;</span>     </span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>사진3<span class="tag">&lt;/<span class="name">th</span>&gt;</span>     </span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>             </span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">style</span>=<span class="string">"text-align: right;"</span>&gt;</span>기차역<span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">style</span>=<span class="string">"text-align: center;"</span>&gt;</span>강아지<span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">style</span>=<span class="string">"text-align: left;"</span>&gt;</span>들꽃<span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/followMe/a.jpg"</span> <span class="attr">style</span>=<span class="string">"width:10px; height:100px;"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/followMe/b.png"</span> <span class="attr">style</span>=<span class="string">"width:100px; height:100px;"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/followMe/c.jpg"</span> <span class="attr">style</span>=<span class="string">"width:100px; height:100px;"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span>          </span><br><span class="line">          <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47433329-357d1680-d7db-11e8-81f5-79e0bdcc22f5.png" alt="[그림4] table 이미지 출력"></p>
+<p><br><br><br><br></p>
+<hr>
+
+<p> <strong>이전 포스트 : <a href="https://nayoungkim0918.github.io/2018/10/24/FolllowMe/FM-JWP-02-4/">02-4. 페이지 이동과 이미지 출력, 리스트 출력</a></strong></p>
+<hr>
+
+<p> <strong>다음 포스트 : <a href="https://nayoungkim0918.github.io/2018/10/29/FolllowMe/FM-JWP-02-6/">02-6. 폼 양식 만들기</a></strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://nayoungkim0918.github.io/2018/10/26/FolllowMe/FM-JWP-02-5/" data-id="cjnnbv7jz00206wv70raq7yk8" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>Follow:</p>        
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/nayoungkim0918" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/watch?v=KITALm0-NTc" target="_blank" rel="noopener">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/10/28/Do-It/Do-It-04-3/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">after</strong>
+        <p class="article-nav-title">
+        
+            [Do It!] 04-3. 브라우저 객체 모델
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/10/24/FolllowMe/FM-JWP-02-4/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">before</strong>
+        <p class="article-nav-title">[Follow Me!] 02-4. 페이지 이동과 이미지 출력, 리스트 출력</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">26</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/1장-JS-시작하기/">1장. JS 시작하기</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/2장-JS-기초문법/">2장. JS 기초문법</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/3장-제어문/">3장. 제어문</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/4장-객체/">4장. 객체</a><span class="category-list-count">3</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/">Follow Me</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/2장-HTML/">2장. HTML</a><span class="category-list-count">5</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/10/28/Do-It/Do-It-04-3/" class="title">[Do It!] 04-3. 브라우저 객체 모델</a></p>
+                            <p class="item-date"><time datetime="2018-10-27T15:30:21.000Z" itemprop="datePublished">2018-10-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/26/FolllowMe/FM-JWP-02-5/" class="title">[Follow Me!] 02-5. 테이블</a></p>
+                            <p class="item-date"><time datetime="2018-10-26T05:53:28.000Z" itemprop="datePublished">2018-10-26</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/24/FolllowMe/FM-JWP-02-4/" class="title">[Follow Me!] 02-4. 페이지 이동과 이미지 출력, 리스트 출력</a></p>
+                            <p class="item-date"><time datetime="2018-10-24T05:53:28.000Z" itemprop="datePublished">2018-10-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/23/FolllowMe/FM-JWP-02-3/" class="title">[Follow Me!] 02-3. 스타일</a></p>
+                            <p class="item-date"><time datetime="2018-10-23T03:15:04.000Z" itemprop="datePublished">2018-10-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/22/FolllowMe/FM-JWP-02-2/" class="title">[Follow Me!] 02-2. 제목 달기와 단락으로 묶기</a></p>
+                            <p class="item-date"><time datetime="2018-10-21T19:44:56.000Z" itemprop="datePublished">2018-10-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">기록 보관소</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 18.89px;">Do_It</a> <a href="/tags/Follow-Me/" style="font-size: 15.56px;">Follow Me</a> <a href="/tags/Follow-Me-시리즈/" style="font-size: 10px;">Follow Me 시리즈</a> <a href="/tags/Follow-Me-초급-중급자를-위한-Java-Web-Programming/" style="font-size: 10px;">Follow Me! 초급.중급자를 위한 Java Web Programming</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/HTML/" style="font-size: 14.44px;">HTML</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Mission/" style="font-size: 11.11px;">Mission</a> <a href="/tags/Web-Programming/" style="font-size: 16.67px;">Web Programming</a> <a href="/tags/break/" style="font-size: 10px;">break</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/continue/" style="font-size: 10px;">continue</a> <a href="/tags/do-while/" style="font-size: 10px;">do while</a> <a href="/tags/else/" style="font-size: 10px;">else</a> <a href="/tags/else-if/" style="font-size: 10px;">else if</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 17.78px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12.22px;">start</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/while/" style="font-size: 10px;">while</a> <a href="/tags/객체/" style="font-size: 12.22px;">객체</a> <a href="/tags/김유진/" style="font-size: 10px;">김유진</a> <a href="/tags/내장-객체/" style="font-size: 10px;">내장 객체</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/브라우저-객체-모델/" style="font-size: 10px;">브라우저 객체 모델</a> <a href="/tags/선택문/" style="font-size: 10px;">선택문</a> <a href="/tags/아티오-ArtStudio/" style="font-size: 10px;">아티오-ArtStudio</a> <a href="/tags/연산자/" style="font-size: 10px;">연산자</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 11.11px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/제어문/" style="font-size: 13.33px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/중첩-for/" style="font-size: 10px;">중첩 for</a> <a href="/tags/중첩-if/" style="font-size: 10px;">중첩 if</a> <a href="/tags/총-정리-실습/" style="font-size: 10px;">총 정리 실습</a> <a href="/tags/출판/" style="font-size: 11.11px;">출판</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">링크</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://google.com">Google</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://naver.com">Naver</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit" style="padding: 10px;">
+                <div class="logo-wrap" style="width: 50%; float: left;">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div style="width: 50%; float: left; padding-top: 20px;">
+                    <p>&copy; 2018 Nayoung kim</p>
+                    <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+                </div>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://nayoungkim0918.github.io/2018/10/26/FolllowMe/FM-JWP-02-5/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
