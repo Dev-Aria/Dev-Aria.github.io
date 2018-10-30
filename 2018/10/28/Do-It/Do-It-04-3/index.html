@@ -286,26 +286,46 @@
 <backdeepviolet id="3">3. 일정한 시간 간격으로 코드 실행하기</backdeepviolet>
 
 <ul>
-<li><p><backviolet> 기본형<backviolet></backviolet></backviolet></p>
+<li><strong>setInterval()</strong> <ul>
+<li>일정한 시간 간격으로 코드 반복 실행</li>
+</ul>
 </li>
-<li><backviolet> 예제</backviolet>
-
-
+<li><strong>setTimeout()</strong>  <ul>
+<li>일정한 시간 후에 코드 실행 후 종료</li>
+</ul>
+</li>
+<li><strong>차이점</strong>  <ul>
+<li>setInterval(): 3초 간격으로 코드 반복 실행</li>
+<li>setTimeout(): 3초 후에 코드를 한 번만 실행 후 종료</li>
+</ul>
 </li>
 </ul>
-<pre><code><figure class="highlight javascript"><figcaption><span>04_3_bom_ex1_.html   </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</code></pre><p>   <img src="" alt="[그림8]  예제 실행 결과"></p>
+<p><img src="https://user-images.githubusercontent.com/24776203/47664590-b7f24580-dbe2-11e8-9842-e5cd0469909f.png" alt="[그림8] setInterval()과 setTimeout()"><br><br></p>
 <h4 id="setInterval-clearInterval"><a href="#setInterval-clearInterval" class="headerlink" title="setInterval()/ clearInterval()"></a>setInterval()/ clearInterval()</h4><ul>
-<li><ul>
-<li><backviolet>setInterval()/ clearInterval() 기본형<backviolet></backviolet></backviolet></li>
+<li><strong>setInterval()</strong> <ul>
+<li>일정한 시간 간격으로 코드 반복 실행</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+<li><strong>clearInterval()</strong>  <ul>
+<li>setInterval() 메서드 종료</li>
+</ul>
 </li>
 </ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47700615-7bfac700-dc5a-11e8-9f21-1965cacca772.png" alt="[그림9] setInterval()과 clearInterval()"></p>
 <ul>
+<li><p><backviolet>setInterval()/ clearInterval() 기본형<backviolet></backviolet></backviolet></p>
+<ul>
+<li><strong>시간 간격: 1/1,000초 단위(ms)</strong><ul>
+<li>3초 간격 = 3,000</li>
+</ul>
+</li>
+<li>참조변수: clearInterval() 메서드에 사용<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">setInterval()</span><br><span class="line">  <span class="number">1.</span> <span class="keyword">var</span> 참조변수 = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; 코드 &#125;, 시간 간격(ms));</span><br><span class="line">  <span class="number">2.</span> <span class="keyword">var</span> 참조변수 = setInterval(<span class="string">"코드"</span>, 시간 간격(ms));    </span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">clearInterval()</span><br><span class="line">  clearInterval(참조변수);</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------</span><br><span class="line">EX</span><br><span class="line"><span class="number">1.</span> <span class="keyword">var</span> intv = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; i++; &#125;, <span class="number">3000</span>);</span><br><span class="line"><span class="number">2.</span> <span class="keyword">var</span> intv = setInterval(<span class="string">" i++ "</span>, <span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
 <li><p><backviolet>setInterval()/ clearInterval() 예제<backviolet></backviolet></backviolet></p>
-<figure class="highlight javascript"><figcaption><span>04_3_bom_ex2_window_setInterval.html </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-<p><img src="" alt="[그림9] setInterval()/ clearInterval() 예제 실행 결과"><br><br></p>
+<figure class="highlight javascript"><figcaption><span>04_3_bom_ex2_window_setInterval.html </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">var</span> addNum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> subNum = <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* </span></span><br><span class="line"><span class="comment">      3초(3,000) 간격으로 반복 실행</span></span><br><span class="line"><span class="comment">      addNum의 값이 1씩 증가</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  <span class="keyword">var</span> auto_1 = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      addNum++;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"addNum: "</span> + addNum);</span><br><span class="line">  &#125;, <span class="number">3000</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/* </span></span><br><span class="line"><span class="comment">      3초(3,000) 간격으로 반복 실행</span></span><br><span class="line"><span class="comment">      subNum의 값이 1씩 rkath</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  <span class="keyword">var</span> auto_2 = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      subNum--;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"subNum: "</span> + subNum);</span><br><span class="line">  &#125;, <span class="number">3000</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">&lt;body&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button onclick="clearInterval(auto_1)"&gt;증가 정지&lt;/</span>button&gt;</span><br><span class="line">    &lt;button onclick=<span class="string">"clearInterval(auto_2)"</span>&gt;감소 정지&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/24776203/47704638-aacb6a00-dc67-11e8-99f5-5dbea30d6297.gif" alt="[그림9] setInterval()/ clearInterval() 예제 실행 결과"><br><br></p>
 </li>
 </ul>
 <h4 id="setTimeout-clearTimeout"><a href="#setTimeout-clearTimeout" class="headerlink" title="setTimeout()/ clearTimeout()"></a>setTimeout()/ clearTimeout()</h4><ul>
