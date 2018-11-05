@@ -56,20 +56,6 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/categories/Book/Do-It/</loc>
-        <lastmod>2018-10-27T15:30:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/categories/Book/Do-It/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC-%EC%9E%85%EB%AC%B8/</loc>
-        <lastmod>2018-10-27T15:30:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://nayoungkim0918.github.io/categories/Book/Do-It/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC-%EC%9E%85%EB%AC%B8/Javascript/</loc>
         <lastmod>2018-10-27T15:30:21.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -84,29 +70,43 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/categories/Book/</loc>
-        <lastmod>2018-10-31T10:35:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://nayoungkim0918.github.io/categories/Book/Follow-Me/</loc>
-        <lastmod>2018-10-31T10:35:51.000Z</lastmod>
+        <lastmod>2018-11-02T07:43:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://nayoungkim0918.github.io/categories/Book/Follow-Me/Java-Web-Programming/</loc>
-        <lastmod>2018-10-31T10:35:51.000Z</lastmod>
+        <lastmod>2018-11-02T07:43:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://nayoungkim0918.github.io/categories/Book/Follow-Me/Java-Web-Programming/2%EC%9E%A5-HTML/</loc>
-        <lastmod>2018-10-31T10:35:51.000Z</lastmod>
+        <lastmod>2018-11-02T07:43:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/categories/Book/</loc>
+        <lastmod>2018-11-05T07:43:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/categories/Book/Do-It/</loc>
+        <lastmod>2018-11-05T07:43:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/categories/Book/Do-It/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC-%EC%9E%85%EB%AC%B8/</loc>
+        <lastmod>2018-11-05T07:43:20.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
