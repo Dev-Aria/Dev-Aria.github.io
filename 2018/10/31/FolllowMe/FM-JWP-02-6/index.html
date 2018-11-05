@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>[Follow Me!] 02-6. 폼 양식 만들기 | Eunoia Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Java,Web Programming,Follow Me,HTML" />
+    
+    <meta name="description" content="02. 웹 페이지의 기본 뼈대 HTML02-6. 폼 양식 만들기1. 텍스트 박스        바로가기2. 패스워드 박스      바로가기3. 체크 박스          바로가기4. 라디오 버튼        바로가기5. 텍스트 영역        바로가기6. 콤보 박스          바로가기7. 히든               바로가기8. 일반 버튼">
+<meta name="keywords" content="Java,Web Programming,Follow Me,HTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Follow Me!] 02-6. 폼 양식 만들기">
+<meta property="og:url" content="http://nayoungkim0918.github.io/2018/10/31/FolllowMe/FM-JWP-02-6/index.html">
+<meta property="og:site_name" content="Eunoia Blog">
+<meta property="og:description" content="02. 웹 페이지의 기본 뼈대 HTML02-6. 폼 양식 만들기1. 텍스트 박스        바로가기2. 패스워드 박스      바로가기3. 체크 박스          바로가기4. 라디오 버튼        바로가기5. 텍스트 영역        바로가기6. 콤보 박스          바로가기7. 히든               바로가기8. 일반 버튼">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://user-images.githubusercontent.com/24776203/47892006-ec8f2700-de98-11e8-9e91-401a87c7ced9.png">
+<meta property="og:updated_time" content="2018-10-31T10:35:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Follow Me!] 02-6. 폼 양식 만들기">
+<meta name="twitter:description" content="02. 웹 페이지의 기본 뼈대 HTML02-6. 폼 양식 만들기1. 텍스트 박스        바로가기2. 패스워드 박스      바로가기3. 체크 박스          바로가기4. 라디오 버튼        바로가기5. 텍스트 영역        바로가기6. 콤보 박스          바로가기7. 히든               바로가기8. 일반 버튼">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/24776203/47892006-ec8f2700-de98-11e8-9e91-401a87c7ced9.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Eunoia Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Study &amp; Programming for Web Programmer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">eunoia♥</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/categories/index.html">Category</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/tags/index.html">Tag</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Follow-Me/">Follow Me</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Follow-Me/Java-Web-Programming/2장-HTML/">2장. HTML</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-FolllowMe/FM-JWP-02-6" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        [Follow Me!] 02-6. 폼 양식 만들기
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/31/FolllowMe/FM-JWP-02-6/" class="article-date">
+            <time datetime="2018-10-31T10:35:51.000Z" itemprop="datePublished">2018-10-31</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Follow-Me/">Follow Me</a>, <a class="tag-link" href="/tags/HTML/">HTML</a>, <a class="tag-link" href="/tags/Java/">Java</a>, <a class="tag-link" href="/tags/Web-Programming/">Web Programming</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="02-웹-페이지의-기본-뼈대-HTML"><a href="#02-웹-페이지의-기본-뼈대-HTML" class="headerlink" title="02. 웹 페이지의 기본 뼈대 HTML"></a>02. 웹 페이지의 기본 뼈대 HTML</h1><h2 id="02-6-폼-양식-만들기"><a href="#02-6-폼-양식-만들기" class="headerlink" title="02-6. 폼 양식 만들기"></a>02-6. 폼 양식 만들기</h2><h5 id="1-텍스트-박스-바로가기"><a href="#1-텍스트-박스-바로가기" class="headerlink" title="1. 텍스트 박스        바로가기"></a>1. 텍스트 박스        <a href="#1">바로가기</a></h5><h5 id="2-패스워드-박스-바로가기"><a href="#2-패스워드-박스-바로가기" class="headerlink" title="2. 패스워드 박스      바로가기"></a>2. 패스워드 박스      <a href="#2">바로가기</a></h5><h5 id="3-체크-박스-바로가기"><a href="#3-체크-박스-바로가기" class="headerlink" title="3. 체크 박스          바로가기"></a>3. 체크 박스          <a href="#3">바로가기</a></h5><h5 id="4-라디오-버튼-바로가기"><a href="#4-라디오-버튼-바로가기" class="headerlink" title="4. 라디오 버튼        바로가기"></a>4. 라디오 버튼        <a href="#4">바로가기</a></h5><h5 id="5-텍스트-영역-바로가기"><a href="#5-텍스트-영역-바로가기" class="headerlink" title="5. 텍스트 영역        바로가기"></a>5. 텍스트 영역        <a href="#5">바로가기</a></h5><h5 id="6-콤보-박스-바로가기"><a href="#6-콤보-박스-바로가기" class="headerlink" title="6. 콤보 박스          바로가기"></a>6. 콤보 박스          <a href="#6">바로가기</a></h5><h5 id="7-히든-바로가기"><a href="#7-히든-바로가기" class="headerlink" title="7. 히든               바로가기"></a>7. 히든               <a href="#7">바로가기</a></h5><h5 id="8-일반-버튼-바로가기"><a href="#8-일반-버튼-바로가기" class="headerlink" title="8. 일반 버튼          바로가기"></a>8. 일반 버튼          <a href="#8">바로가기</a></h5><h5 id="9-전송-버튼-바로가기"><a href="#9-전송-버튼-바로가기" class="headerlink" title="9. 전송 버튼          바로가기"></a>9. 전송 버튼          <a href="#9">바로가기</a></h5><h5 id="10-취소-버튼-바로가기"><a href="#10-취소-버튼-바로가기" class="headerlink" title="10. 취소 버튼         바로가기"></a>10. 취소 버튼         <a href="#10">바로가기</a></h5><p><br><br><br><br> </p>
+<backdeepviolet>form 태그의 개념</backdeepviolet>
+
+<ul>
+<li><strong>뷰 페이지</strong><ul>
+<li>사용자에게 요청의 결과 보여주기</li>
+<li>사용자의 입력 받기</li>
+</ul>
+</li>
+<li><strong>폼(form) 태그</strong><ul>
+<li>사용자가 입력한 데이터를 수집해 서버로 전송하는 역할</li>
+<li>입력 양식들을 하나의 단위로 묶어 서버로 전송<ul>
+<li>여러 종류의 입력 양식을 사용 가능</li>
+</ul>
+</li>
+<li>속성<ul>
+<li><strong>action</strong> : form 태그가 전송한 데이터를 받을 서버 페이지의 위치 지정</li>
+<li><strong>method</strong> : 데이터를 서버로 전송하는 방식 지정<ul>
+<li><strong>get방식</strong> <ul>
+<li>입력 데이터를 url에 연결하여 전송하므로 웹 페이지 주소와 함께 그대로 노출</li>
+<li>보안에 민감한 데이터를 get으로 전송하면 좋지 않음</li>
+</ul>
+</li>
+<li><strong>post방식</strong> <ul>
+<li>패킷 안에 데이터를 담아 전송하기 때문에 정보가 외부에 보이지 않음</li>
+<li>보안에 민감한 데이터를 전송할 때 사용 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>input 태그</strong> <ul>
+<li>속성<ul>
+<li><strong>type</strong> : input 태그의 종류 지정<ul>
+<li>text, checkbox, radio, hidden, button, reset 등</li>
+</ul>
+</li>
+<li><strong>name</strong> : 현재 태그의 이름</li>
+<li><strong>value</strong> : 입력 양식의 값<ul>
+<li>읽기, 입력 가능</li>
+<li><strong>값 할당</strong> : 사용자가 입력 하지 않아도 입력 양식에 디폴트 출력</li>
+<li><strong>사용자 입력</strong> : value 속성으로 읽어올 수 있음<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<backdeepviolet id="1">1. 텍스트 박스</backdeepviolet>
+
+<ul>
+<li>input : type : text</li>
+<li>한 줄 입력 박스</li>
+<li><p><strong>속성</strong> </p>
+<ul>
+<li><strong>disabled</strong> : 해당 입력 양식 사용 불가</li>
+<li><strong>readonly</strong> : 디폴트 문자열 출력, 입력 값 수정 불가</li>
+</ul>
+</li>
+<li><backviolet>텍스트 박스 실습</backviolet>
+
+<figure class="highlight html"><figcaption><span>02_6_html_input1_text.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>input태그 : type : text<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">        NAME : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">        EMAIL : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">value</span>=<span class="string">"aaa@test.com"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">        사용 불가 : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">disabled</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">        읽기 전용 : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">value</span>=<span class="string">"aaa@test.com"</span> <span class="attr">readonly</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/24776203/47892006-ec8f2700-de98-11e8-9e91-401a87c7ced9.png" alt="[그림1] 텍스트 박스 실습 결과"><br><br><br></p>
+</li>
+</ul>
+<backdeepviolet id="2">2. 패스워드 박스</backdeepviolet>
+
+<ul>
+<li>input : type : password</li>
+<li>텍스트 박스와 동일</li>
+<li><p><strong>차이</strong> : 입력 시에 데이터가 보이지 않음<br><br></p>
+</li>
+<li><p><backviolet>패스워드 박스 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_input2_password.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>패스워드 박스 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>input태그 : type : password<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">            PASSWORD : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"pwd"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47892008-ec8f2700-de98-11e8-8921-093d8c3120ea.png" alt="[그림2] 패스워드 박스 결과"><br><br><br></p>
+<backdeepviolet id="3">3. 체크 박스</backdeepviolet>
+
+<ul>
+<li>input : type : checkbox</li>
+<li>리스트 중에서 선호하는 것을 선택하는 입력 양식<ul>
+<li><strong>다중 선택</strong> 가능</li>
+</ul>
+</li>
+<li><p>속성</p>
+<ul>
+<li><strong>name</strong> <ul>
+<li>동일하게 설정</li>
+<li>여러 개의 체크 박스를 하나의 그룹으로 묶기</li>
+</ul>
+</li>
+<li><strong>value</strong><ul>
+<li>해당 체크박스의 값 = 서버로 전송되는 값 ≠ 화면에 출력되는 값<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><backviolet>체크 박스 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_input3_checkbox.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>체크 박스 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>input태그 : type : checkbox<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">            좋아하는 과일을 모두 고르시오<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"fruit"</span> <span class="attr">value</span>=<span class="string">"1"</span>&gt;</span>사과<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"fruit"</span> <span class="attr">value</span>=<span class="string">"2"</span>&gt;</span>바나나<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"fruit"</span> <span class="attr">value</span>=<span class="string">"3"</span>&gt;</span>포도<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"fruit"</span> <span class="attr">value</span>=<span class="string">"4"</span>&gt;</span>귤<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47914134-cf327b00-dee1-11e8-93e9-345f6bd30784.png" alt="[그림3] 체크 박스 결과"><br><br><br></p>
+<backdeepviolet id="4">4. 라디오 버튼</backdeepviolet>
+
+<ul>
+<li>input : type : radio</li>
+<li>한 그룹의 리스트에서 하나만 선택할 수 있는 입력 양식<ul>
+<li><strong>단일 선택</strong> 가능</li>
+</ul>
+</li>
+<li><p>속성</p>
+<ul>
+<li><strong>name</strong> <ul>
+<li>동일하게 설정</li>
+<li>여러 개의 체크 박스를 하나의 그룹으로 묶기</li>
+</ul>
+</li>
+<li><strong>value</strong><ul>
+<li>해당 체크박스의 값 = 서버로 전송되는 값 ≠ 화면에 출력되는 값<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><backviolet>라디오 버튼 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_input4_radio.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>라디오 버튼 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>input태그 : type : radio<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">            당신의 직업은 무엇입니까?<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"job"</span> <span class="attr">value</span>=<span class="string">"job1"</span>&gt;</span>연예인<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"job"</span> <span class="attr">value</span>=<span class="string">"job2"</span>&gt;</span>공무원<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"job"</span> <span class="attr">value</span>=<span class="string">"job3"</span>&gt;</span>회사원<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"job"</span> <span class="attr">value</span>=<span class="string">"job4"</span>&gt;</span>개인사업자<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47916084-51be3900-dee8-11e8-8fdd-b4f21bf273c6.png" alt="[그림4] 라디오 버튼 결과"><br><br><br></p>
+<backdeepviolet id="5">5. 텍스트 영역</backdeepviolet>
+
+<ul>
+<li><strong>input 태그 text</strong> : 한 줄 입력 가능</li>
+<li><strong>textarea 태그</strong> : 여러 줄 입력 가능</li>
+<li><p>속성</p>
+<ul>
+<li><strong>rows</strong> : 텍스트 영역의 세로 길이 설정 : 줄 수 </li>
+<li><strong>cols</strong> : 텍스트 영역의 가로 길이 설정 : 글자 수</li>
+<li><strong>style : resize</strong> : 텍스트 영역 크기 조절<ul>
+<li>none : 높이, 너비 조절 불가</li>
+<li>vertical : 높이 조절</li>
+<li>horizontal : 너비 조절</li>
+<li>both : 높이, 너비 조절 모두 가능<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><backviolet>텍스트 영역 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_textarea.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>텍스트 영역 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>textarea태그<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"content1"</span> <span class="attr">rows</span>=<span class="string">"5"</span> <span class="attr">cols</span>=<span class="string">"40"</span> &gt;</span></span><br><span class="line">            높이, 너비 조절 가능</span><br><span class="line">            content        </span><br><span class="line">        <span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"content2"</span> <span class="attr">rows</span>=<span class="string">"4"</span> <span class="attr">cols</span>=<span class="string">"30"</span> <span class="attr">style</span>=<span class="string">"resize: vertical;"</span> &gt;</span></span><br><span class="line">            높이 조절만 가능</span><br><span class="line">            content        </span><br><span class="line">        <span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"content3"</span> <span class="attr">rows</span>=<span class="string">"3"</span> <span class="attr">cols</span>=<span class="string">"40"</span> <span class="attr">style</span>=<span class="string">"resize: horizontal;"</span> &gt;</span></span><br><span class="line">            너비 조절만 가능</span><br><span class="line">            content        </span><br><span class="line">        <span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span>    </span><br><span class="line">        <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"content4"</span> <span class="attr">rows</span>=<span class="string">"5"</span> <span class="attr">cols</span>=<span class="string">"40"</span> <span class="attr">style</span>=<span class="string">"resize: none;"</span> &gt;</span></span><br><span class="line">            높이, 너비 조절 불가능</span><br><span class="line">            content        </span><br><span class="line">        <span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47966778-ba004c80-e099-11e8-8922-780d7ff5ccf5.gif" alt="[그림5] 텍스트 영역 결과"><br><br><br></p>
+<backdeepviolet id="6">6. 콤보 박스</backdeepviolet>
+
+<ul>
+<li><strong>select 태그</strong> : 목록을 드롭 다운(Drop-Down)으로 보여줌<ul>
+<li>select: 전체 목록</li>
+<li>option: 목록의 항목</li>
+</ul>
+</li>
+<li><p>선택한 항목의 value 값이 서버로 전송<br><br></p>
+</li>
+<li><p><backviolet>콤보 박스 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_select.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>콤보 박스 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>select : option<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"fruit"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"apple"</span>&gt;</span>사과<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"banana"</span>&gt;</span>바나나<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"grape"</span>&gt;</span>포도<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"orange"</span>&gt;</span>오렌지<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47967144-a22ac780-e09d-11e8-8b4c-65dfd79da028.png" alt="[그림6] 콤보 박스 결과"><br><br><br></p>
+<backdeepviolet id="7">7. 히든</backdeepviolet>
+
+<ul>
+<li><p>input : type : hidden</p>
+<ul>
+<li>웹 페이지 실행 시, 화면에는 보이지 않지만 서버로 전송되는 value 값<br><br></li>
+</ul>
+</li>
+<li><p><backviolet>히든 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_input5_hidden.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>히든 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>input : type : hidden<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"type"</span> <span class="attr">value</span>=<span class="string">"add"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span>      </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47967376-e4550880-e09f-11e8-8e61-4cad32adf00a.png" alt="[그림7] 히든 실습 결과"><br><br><br></p>
+<backdeepviolet id="8">8. 일반 버튼</backdeepviolet>
+
+<ul>
+<li><p>input : type : button</p>
+<ul>
+<li><strong>value</strong> : 버튼 표면의 텍스트<br><br></li>
+</ul>
+</li>
+<li><p><backviolet>일반 버튼 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_input6_button.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>일반 버튼 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"일반버튼"</span>/&gt;</span>      </span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47967378-e4550880-e09f-11e8-8892-fb39ec0fc479.png" alt="[그림8] 일반 버튼 결과"><br><br><br></p>
+<backdeepviolet id="9">9. 전송 버튼</backdeepviolet>
+
+<ul>
+<li><p>input : type : submit</p>
+<ul>
+<li>사용자가 입력 양식에 입력한 데이터를 서버로 전송</li>
+<li>반드시 submit 버튼을 클릭해야 서버로 전송됨</li>
+<li>속성<ul>
+<li><strong>action</strong> : 지정한 서버 페이지로 데이터 전송</li>
+<li><strong>method</strong> : 전송 방식 설정</li>
+<li><strong>value</strong> : 버튼 표면에 출력되는 텍스트<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><backviolet>전송 버튼 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_input7_submit.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>전송 버튼 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>input : type : submit<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"a.jsp"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"가입"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span>        </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47983487-cc6c9b80-e116-11e8-82f1-fb565d202261.png" alt="[그림9] 전송 버튼 결과"><br><br><br></p>
+<backdeepviolet id="10">10. 취소 버튼</backdeepviolet>
+
+<ul>
+<li><p>input : type : reset</p>
+<ul>
+<li>입력 양식에 입력한 데이터 초기화<br><br></li>
+</ul>
+</li>
+<li><p><backviolet>취소 버튼 실습</backviolet></p>
+<figure class="highlight html"><figcaption><span>02_6_html_input8_reset.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>취소 버튼 실습<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>input : type : reset<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span> <span class="attr">value</span>=<span class="string">"취소"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span>         </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/47983781-bc08f080-e117-11e8-876a-ef74a6a311c1.png" alt="[그림10] 취소 버튼 결과"></p>
+<p><br><br><br><br></p>
+<hr>
+
+<p> <strong>이전 포스트 : <a href="https://nayoungkim0918.github.io/2018/10/26/FolllowMe/FM-JWP-02-5/">02-5. 테이블</a></strong></p>
+<hr>
+
+<p> <strong>다음 포스트 : <a href="https://nayoungkim0918.github.io/">02-7. 블록</a></strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://nayoungkim0918.github.io/2018/10/31/FolllowMe/FM-JWP-02-6/" data-id="cjnvlwo3800274wv78vhk0kdn" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>Follow:</p>        
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/nayoungkim0918" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/watch?v=KITALm0-NTc" target="_blank" rel="noopener">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/10/28/Do-It/Do-It-04-3/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">before</strong>
+        <p class="article-nav-title">[Do It!] 04-3. 브라우저 객체 모델</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/1장-JS-시작하기/">1장. JS 시작하기</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/2장-JS-기초문법/">2장. JS 기초문법</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/3장-제어문/">3장. 제어문</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/4장-객체/">4장. 객체</a><span class="category-list-count">3</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/">Follow Me</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/2장-HTML/">2장. HTML</a><span class="category-list-count">6</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/31/FolllowMe/FM-JWP-02-6/" class="title">[Follow Me!] 02-6. 폼 양식 만들기</a></p>
+                            <p class="item-date"><time datetime="2018-10-31T10:35:51.000Z" itemprop="datePublished">2018-10-31</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/10/28/Do-It/Do-It-04-3/" class="title">[Do It!] 04-3. 브라우저 객체 모델</a></p>
+                            <p class="item-date"><time datetime="2018-10-27T15:30:21.000Z" itemprop="datePublished">2018-10-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/26/FolllowMe/FM-JWP-02-5/" class="title">[Follow Me!] 02-5. 테이블</a></p>
+                            <p class="item-date"><time datetime="2018-10-26T05:53:28.000Z" itemprop="datePublished">2018-10-26</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/24/FolllowMe/FM-JWP-02-4/" class="title">[Follow Me!] 02-4. 페이지 이동과 이미지 출력, 리스트 출력</a></p>
+                            <p class="item-date"><time datetime="2018-10-24T05:53:28.000Z" itemprop="datePublished">2018-10-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/10/23/FolllowMe/FM-JWP-02-3/" class="title">[Follow Me!] 02-3. 스타일</a></p>
+                            <p class="item-date"><time datetime="2018-10-23T03:15:04.000Z" itemprop="datePublished">2018-10-23</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">기록 보관소</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 18.89px;">Do_It</a> <a href="/tags/Follow-Me/" style="font-size: 15.56px;">Follow Me</a> <a href="/tags/Follow-Me-시리즈/" style="font-size: 10px;">Follow Me 시리즈</a> <a href="/tags/Follow-Me-초급-중급자를-위한-Java-Web-Programming/" style="font-size: 10px;">Follow Me! 초급.중급자를 위한 Java Web Programming</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/HTML/" style="font-size: 14.44px;">HTML</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Mission/" style="font-size: 11.11px;">Mission</a> <a href="/tags/Web-Programming/" style="font-size: 16.67px;">Web Programming</a> <a href="/tags/break/" style="font-size: 10px;">break</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/continue/" style="font-size: 10px;">continue</a> <a href="/tags/do-while/" style="font-size: 10px;">do while</a> <a href="/tags/else/" style="font-size: 10px;">else</a> <a href="/tags/else-if/" style="font-size: 10px;">else if</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 17.78px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12.22px;">start</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/while/" style="font-size: 10px;">while</a> <a href="/tags/객체/" style="font-size: 12.22px;">객체</a> <a href="/tags/김유진/" style="font-size: 10px;">김유진</a> <a href="/tags/내장-객체/" style="font-size: 10px;">내장 객체</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/브라우저-객체-모델/" style="font-size: 10px;">브라우저 객체 모델</a> <a href="/tags/선택문/" style="font-size: 10px;">선택문</a> <a href="/tags/아티오-ArtStudio/" style="font-size: 10px;">아티오-ArtStudio</a> <a href="/tags/연산자/" style="font-size: 10px;">연산자</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 11.11px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/제어문/" style="font-size: 13.33px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/중첩-for/" style="font-size: 10px;">중첩 for</a> <a href="/tags/중첩-if/" style="font-size: 10px;">중첩 if</a> <a href="/tags/총-정리-실습/" style="font-size: 10px;">총 정리 실습</a> <a href="/tags/출판/" style="font-size: 11.11px;">출판</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">링크</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://google.com">Google</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://naver.com">Naver</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit" style="padding: 10px;">
+                <div class="logo-wrap" style="width: 50%; float: left;">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div style="width: 50%; float: left; padding-top: 20px;">
+                    <p>&copy; 2018 Nayoung kim</p>
+                    <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+                </div>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://nayoungkim0918.github.io/2018/10/31/FolllowMe/FM-JWP-02-6/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

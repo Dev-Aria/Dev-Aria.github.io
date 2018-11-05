@@ -296,34 +296,6 @@
     </url>
 
     <url>
-        <loc>http://nayoungkim0918.github.io/tags/Java/</loc>
-        <lastmod>2018-10-26T05:53:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/Web-Programming/</loc>
-        <lastmod>2018-10-26T05:53:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/Follow-Me/</loc>
-        <lastmod>2018-10-26T05:53:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://nayoungkim0918.github.io/tags/HTML/</loc>
-        <lastmod>2018-10-26T05:53:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://nayoungkim0918.github.io/tags/Do-It/</loc>
         <lastmod>2018-10-27T15:30:21.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -354,6 +326,34 @@
     <url>
         <loc>http://nayoungkim0918.github.io/tags/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EA%B0%9D%EC%B2%B4-%EB%AA%A8%EB%8D%B8/</loc>
         <lastmod>2018-10-27T15:30:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Java/</loc>
+        <lastmod>2018-10-31T10:35:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Web-Programming/</loc>
+        <lastmod>2018-10-31T10:35:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/Follow-Me/</loc>
+        <lastmod>2018-10-31T10:35:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://nayoungkim0918.github.io/tags/HTML/</loc>
+        <lastmod>2018-10-31T10:35:51.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
