@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>[Do It!] 05-1. 함수 | Eunoia Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Do_It,javascript,html,함수" />
+    
+    <meta name="description" content="05. 함수5-1. 함수1. 함수란?                                바로가기2. 기본 함수 정의문                        바로가기3. 매개변수가 있는 정의문                  바로가기4. 매개변수 없이 함수에 전달된 값 받아오기  바로가기  1. 함수란?  함수 프로그램의 코드를 저장하는 공간 코드를">
+<meta name="keywords" content="Do_It,javascript,html,함수">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Do It!] 05-1. 함수">
+<meta property="og:url" content="http://nayoungkim0918.github.io/2018/11/08/Do-It/Do-It-05-1/index.html">
+<meta property="og:site_name" content="Eunoia Blog">
+<meta property="og:description" content="05. 함수5-1. 함수1. 함수란?                                바로가기2. 기본 함수 정의문                        바로가기3. 매개변수가 있는 정의문                  바로가기4. 매개변수 없이 함수에 전달된 값 받아오기  바로가기  1. 함수란?  함수 프로그램의 코드를 저장하는 공간 코드를">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://user-images.githubusercontent.com/24776203/48171178-07044d00-e33e-11e8-82e9-95359557ea01.png">
+<meta property="og:updated_time" content="2018-11-07T23:22:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Do It!] 05-1. 함수">
+<meta name="twitter:description" content="05. 함수5-1. 함수1. 함수란?                                바로가기2. 기본 함수 정의문                        바로가기3. 매개변수가 있는 정의문                  바로가기4. 매개변수 없이 함수에 전달된 값 받아오기  바로가기  1. 함수란?  함수 프로그램의 코드를 저장하는 공간 코드를">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/24776203/48171178-07044d00-e33e-11e8-82e9-95359557ea01.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Eunoia Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Study &amp; Programming for Web Programmer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">eunoia♥</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/categories/index.html">Category</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/tags/index.html">Tag</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Do-It/">Do It</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/5장-함수/">5장. 함수</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Do-It/Do-It-05-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        [Do It!] 05-1. 함수
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/11/08/Do-It/Do-It-05-1/" class="article-date">
+            <time datetime="2018-11-07T23:22:12.000Z" itemprop="datePublished">2018-11-08</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Do-It/">Do_It</a>, <a class="tag-link" href="/tags/html/">html</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>, <a class="tag-link" href="/tags/함수/">함수</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="05-함수"><a href="#05-함수" class="headerlink" title="05. 함수"></a>05. 함수</h1><h2 id="5-1-함수"><a href="#5-1-함수" class="headerlink" title="5-1. 함수"></a>5-1. 함수</h2><h5 id="1-함수란-바로가기"><a href="#1-함수란-바로가기" class="headerlink" title="1. 함수란?                                바로가기"></a>1. 함수란?                                <a href="#1">바로가기</a></h5><h5 id="2-기본-함수-정의문-바로가기"><a href="#2-기본-함수-정의문-바로가기" class="headerlink" title="2. 기본 함수 정의문                        바로가기"></a>2. 기본 함수 정의문                        <a href="#2">바로가기</a></h5><h5 id="3-매개변수가-있는-정의문-바로가기"><a href="#3-매개변수가-있는-정의문-바로가기" class="headerlink" title="3. 매개변수가 있는 정의문                  바로가기"></a>3. 매개변수가 있는 정의문                  <a href="#3">바로가기</a></h5><h5 id="4-매개변수-없이-함수에-전달된-값-받아오기-바로가기"><a href="#4-매개변수-없이-함수에-전달된-값-받아오기-바로가기" class="headerlink" title="4. 매개변수 없이 함수에 전달된 값 받아오기  바로가기"></a>4. 매개변수 없이 함수에 전달된 값 받아오기  <a href="#4">바로가기</a></h5><p><br><br> </p>
+<backdeepviolet id="1">1. 함수란?</backdeepviolet>
+
+<h4 id="함수"><a href="#함수" class="headerlink" title="함수"></a>함수</h4><ul>
+<li>프로그램의 코드를 저장하는 공간</li>
+<li>코드를 메모리에 저장했다가 필요할 때 마다 호출해 사용</li>
+<li><strong>[EX] TV 리모컨</strong><ul>
+<li>코드 저장: 각 채널의 버튼: 해당 채널로 바꿀 수 있음</li>
+<li>함수 호출: 리모컨의 버튼 클릭<br><br></li>
+</ul>
+</li>
+</ul>
+<h4 id="변수와-함수의-차이점"><a href="#변수와-함수의-차이점" class="headerlink" title="변수와 함수의 차이점"></a>변수와 함수의 차이점</h4><p>  <img src="https://user-images.githubusercontent.com/24776203/48171178-07044d00-e33e-11e8-82e9-95359557ea01.png" alt="[그림1] 변수와 함수의 차이점"></p>
+<p><br><br></p>
+<backdeepviolet id="2">2. 기본 함수 정의문</backdeepviolet>
+
+<h4 id="함수-정의문"><a href="#함수-정의문" class="headerlink" title="함수 정의문"></a>함수 정의문</h4><ul>
+<li>함수를 사용해 코드를 저장한 것</li>
+<li><p>함수에서는 function 키워드를 사용해 변수 선언<br><br></p>
+</li>
+<li><backviolet>함수 정의문 기본형</backviolet>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 함수명(<span class="params"></span>) </span>&#123;</span><br><span class="line">  자바스크립트 코드;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//익명함수(함수명이 없는 함수) 선언 후 변수 참조</span></span><br><span class="line">참조변수 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  자바스크립트 코드;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//함수 호출</span></span><br><span class="line">함수명();</span><br><span class="line">참조변수();</span><br><span class="line"></span><br><span class="line">=================================================</span><br><span class="line"><span class="comment">//EX</span></span><br><span class="line"><span class="comment">//함수 정의</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFnc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"hello~"</span>, <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"welcome"</span>, <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myFnc();  <span class="comment">//함수 1회 호출</span></span><br><span class="line">myFnc();  <span class="comment">//함수 2회 호출</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br>  </p>
+<h4 id="Hoisting-일반-함수-정의-방식과-함수-선언-참조-방식의-방식의-차이점"><a href="#Hoisting-일반-함수-정의-방식과-함수-선언-참조-방식의-방식의-차이점" class="headerlink" title="Hoisting: 일반 함수 정의 방식과 함수 선언 참조 방식의 방식의 차이점"></a><backgreen>Hoisting: 일반 함수 정의 방식과 함수 선언 참조 방식의 방식의 차이점</backgreen></h4><ul>
+<li><strong>호이스팅(Hoisting)</strong> : 물건을 끌어올리다.<ul>
+<li>일반 함수 정의: 함수 호출 시 호이스팅(Hoisting) 기술 지원</li>
+<li>익명 함수 선언 참조 방식: 호이스팅 지원 X</li>
+</ul>
+</li>
+<li><p>호이스팅 적용</p>
+<ul>
+<li><strong>함수 정의문보다 호출문이 먼저 나와도 함수 정의문을 끌어올려 함수 호출</strong></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/48183195-3c765e00-e371-11e8-8fff-010ecf61e5ec.png" alt="[그림2] 호이스팅(Hoisting) "><br><br></p>
+</li>
+<li><backviolet>Hoisting 실습 예제</backviolet>
+
+<figure class="highlight javascript"><figcaption><span>05_1_function_ex1_hoisting.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">//호출 횟수를 체크하는 변수</span></span><br><span class="line">    <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//myFnc() 첫번째 호출(정의 이전)</span></span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"&lt;br/&gt;&lt;h5&gt;함수 정의 전: myFnc() 메서드 호출&lt;/h5&gt;"</span>);</span><br><span class="line">    myFnc();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//myFnc() 함수 정의</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">myFnc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"hello"</span> + count, <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//myFnc() 두번째 호출(정의 이후)</span></span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"&lt;br/&gt;&lt;br/&gt;&lt;h5&gt;함수 정의 후: myFnc() 메서드 호출&lt;/h5&gt;"</span>);</span><br><span class="line">    myFnc();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//익명함수 이므로 호이스팅 안됨</span></span><br><span class="line">    <span class="comment">//theFnc();</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//theFnc() 함수 정의(익명함수)</span></span><br><span class="line">    <span class="keyword">var</span> theFnc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"bye"</span> + count, <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//theFnc() 호출</span></span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">"&lt;br/&gt;&lt;br/&gt;&lt;h5&gt;함수 정의 후: theFnc() 메서드 호출&lt;/h5&gt;"</span>);</span><br><span class="line">    theFnc();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/24776203/48189361-5ae55500-e383-11e8-85ae-24766b2367e8.png" alt="[그림3] 호이스팅(Hoisting) 실습 예제 "><br><br></p>
+</li>
+</ul>
+<ul>
+<li><backviolet>함수 정의문 실습 예제</backviolet>
+
+<ul>
+<li>[배경색 바꾸기] 버튼을 클릭할 때마다 배경색이 바뀌도록 하는 예제</li>
+<li><strong>getElementById</strong><ul>
+<li>id 값을 이용해 문서 객체(태그)를 선택하는 메서드</li>
+<li>CSS의 id 선택자와 비슷한 역할</li>
+</ul>
+</li>
+<li><p><strong>문서객체.style.스타일속성 = 새 값;</strong></p>
+<ul>
+<li>선택한 문서 객체에 스타일 적용</li>
+</ul>
+<figure class="highlight javascript"><figcaption><span>05_1_function_ex2.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;body id=<span class="string">"theBody"</span>&gt;</span><br><span class="line">  &lt;h3&gt;<span class="number">5</span>장. 함수&lt;<span class="regexp">/h3&gt;</span></span><br><span class="line"><span class="regexp">  &lt;h5&gt;함수 선언문 실습 예제&lt;/</span>h5&gt;</span><br><span class="line"></span><br><span class="line">  &lt;!--버튼 클릭시 changeColor() 호출--&gt;</span><br><span class="line">  &lt;button onclick=<span class="string">"changeColor();"</span>&gt;배경색 바꾸기&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> color = [<span class="string">"white"</span>, <span class="string">"yellow"</span>, <span class="string">"aqua"</span>, <span class="string">"purple"</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">changeColor</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        i++;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//i의 값이 4이상이면 i에 0대입</span></span><br><span class="line">        <span class="keyword">if</span>(i &gt;= color.length) &#123;</span><br><span class="line">            i = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> bodyTag = <span class="built_in">document</span>.getElementById(<span class="string">"theBody"</span>);</span><br><span class="line">        bodyTag.style.backgroundColor = color[i];</span><br><span class="line">    &#125;    </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  <img src="https://user-images.githubusercontent.com/24776203/48190162-502bbf80-e385-11e8-9b11-0d893de4898c.gif" alt="[그림4] 함수 정의문 실습 예제 "><br><br><br></p>
+</li>
+</ul>
+</li>
+</ul>
+<backdeepviolet id="3">3. 매개변수가 있는 정의문</backdeepviolet>
+
+<ul>
+<li>매개변수 : parameter</li>
+<li>기본 함수 정의문의 문제점 해결<ul>
+<li>문제점: <strong>함수를 호출할 때 값을 전달할 수 없음</strong>  </li>
+<li>단순히 함수명으로 호출해서 코드 실행</li>
+</ul>
+</li>
+<li><p>매개변수가 있는 함수 정의문</p>
+<ul>
+<li>함수 호출 시, 전달하고자 하는 값을 입력해 호출 가능</li>
+<li>전달된 값을 매개변수가 받아 함수 정의문에서 사용 가능<br><br></li>
+</ul>
+</li>
+<li><backviolet>매개변수가 있는 함수 정의문 기본형</backviolet>
+
+<ul>
+<li>함수 호출 시, 데이터1은 매개변수1에 저장되고, 데이터2는 매개변수2에 저장된다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 함수명(<span class="params">매개변수<span class="number">1</span>, 매개변수<span class="number">2</span>, ... 매개변수n</span>) </span>&#123;</span><br><span class="line">  자바스크립트 코드;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">함수명(데이터<span class="number">1</span>, 데이터<span class="number">2</span>, ... 데이터n);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><br>  </p>
+<ul>
+<li><backviolet>매개변수 함수 실습 예제 1</backviolet>
+
+<ul>
+<li><p>함수 호출 시, 이름과 사는 지역의 데이터를 함수 정의문의 매개변수 name과 area에 각각 전달하여 함수 안에 있는 실행문의 매개변수에 저장된 데이터를 불러와 출력하는 예제</p>
+<figure class="highlight javascript"><figcaption><span>05_1_function_ex3_parameter.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;    </span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myFnc</span>(<span class="params">name, area</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">document</span>.write(<span class="string">"안녕하세요. "</span> + name + <span class="string">"입니다."</span>, <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">      <span class="built_in">document</span>.write(<span class="string">"사는 곳은 "</span> + area + <span class="string">"입니다."</span>, <span class="string">"&lt;br&gt;&lt;br&gt;"</span>);</span><br><span class="line">  &#125;    </span><br><span class="line"></span><br><span class="line">  myFnc(<span class="string">"홍당무"</span>, <span class="string">"서울"</span>);</span><br><span class="line"></span><br><span class="line">  myFnc(<span class="string">"깍두기"</span>, <span class="string">"부산"</span>);    </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/24776203/48240023-895f4080-e414-11e8-81f0-461297b4cdc8.png" alt="[그림5] 매개변수 함수 실습 예제 1"><br><br>  </p>
+</li>
+<li><backviolet>매개변수 함수 실습 예제 2</backviolet>
+
+<ul>
+<li><p>질의응답 창(prompt)을 통해 방문자의 아이디와 비밀번호를 입력받기</p>
+<ul>
+<li>잘못된 아이디: “존재하지 않는 아이디입니다” 라는 경고창 팝업</li>
+<li>잘못된 비밀번호: “잘못된 비밀번호입니다.” 라는 경고창 팝업</li>
+<li>아이디와 비밀번호 일치: 환영 문구 출력</li>
+</ul>
+<figure class="highlight javascript"><figcaption><span>05_1_function_ex4_parameter.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;   </span><br><span class="line">  <span class="keyword">var</span> rightId = <span class="string">"korea"</span>;</span><br><span class="line">  <span class="keyword">var</span> rightPw = <span class="string">"1234"</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">login</span>(<span class="params">id, pw</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(id == rightId) &#123;</span><br><span class="line">          <span class="keyword">if</span>(pw == rightPw) &#123;</span><br><span class="line">              <span class="built_in">document</span>.write(id + <span class="string">"님 방문을 환영합니다."</span>);</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              alert(<span class="string">"잘못된 비밀번호입니다."</span>);</span><br><span class="line">          &#125;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          alert(<span class="string">"존재하지 않는 아이디입니다."</span>);</span><br><span class="line">      &#125;        </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> userId = prompt(<span class="string">"아이디를 입력하세요."</span>, <span class="string">""</span>);</span><br><span class="line">  <span class="keyword">var</span> userPw = prompt(<span class="string">"패스워드를 입력하세요."</span>, <span class="string">""</span>);</span><br><span class="line"></span><br><span class="line">  login(userId, userPw); </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/24776203/48299674-9a42ab80-e513-11e8-9b97-0ccc9c0a44bc.png" alt="[그림6] 매개변수 함수 실습 예제 2"><br><br><br></p>
+</li>
+</ul>
+</li>
+</ul>
+<backdeepviolet id="4">4. 매개변수 없이 함수에 전달된 값 받아오기</backdeepviolet>
+
+<ul>
+<li><strong>arguments</strong> : 매개변수가 없는 함수 정의문에서 참조하는 배열 변수</li>
+<li>함수 정의문에서 매개변수를 사용하는 것처럼 함수 호출문의 값 받아오기</li>
+<li><p>함수 정의문의 매개변수가 없는 상태에서 데이터를 전달하여 함수를 호출하면 그 값이 배열에 저장되고, 그 배열을 참조하는 변수를 arguments라고 한다.   </p>
+</li>
+<li><p><strong>arguments 라는 배열 변수가 자동생성 되어 해당 함수 안에서 사용 가능</strong><br><br></p>
+</li>
+<li><backviolet>arguments 기본형</backviolet>
+
+<ul>
+<li>함수 호출 시, 데이터1은 매개변수1에 저장되고, 데이터2는 매개변수2에 저장된다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 함수명(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">arguments</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">함수명(데이터<span class="number">1</span>, 데이터<span class="number">2</span>, 데이터<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><br>  </p>
+<ul>
+<li><backviolet>arguments 실습 예제</backviolet>
+
+<ul>
+<li>매개변수를 생략한 함수 호출문에서 3개의 숫자형 데이터를 전달<ul>
+<li>배열에 저장되는 숫자형 데이터는 arguments 변수로 참조 가능</li>
+<li>arguments 인덱스를 이용해 배열에 저장된 값을 불러와 합을 구하여 결괏값(60)을 화면에 출력</li>
+</ul>
+</li>
+<li><p>for 문을 이용해 전달받은 데이터의 갯수만큼 반복해 sum에 값을 더하는 것도 가능</p>
+<figure class="highlight javascript"><figcaption><span>05_1_function_ex5_arguments.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;    </span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">sum1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> sum = <span class="built_in">arguments</span>[<span class="number">0</span>] + <span class="built_in">arguments</span>[<span class="number">1</span>] + <span class="built_in">arguments</span>[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">      <span class="built_in">document</span>.write(<span class="string">"sum1()의 결과 : "</span> + sum, <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">sum2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">          sum += <span class="built_in">arguments</span>[i];</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="built_in">document</span>.write(<span class="string">"sum2()의 결과 : "</span> + sum, <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  sum1(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>);</span><br><span class="line">  sum2(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>);</span><br><span class="line">  sum2(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>, <span class="number">80</span>, <span class="number">90</span>, <span class="number">100</span>);       </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/24776203/48300839-227e7c00-e527-11e8-84c8-e3ea9e5325a8.png" alt="[그림7] arguments 실습 예제"><br><br>  </p>
+</li>
+</ul>
+</li>
+</ul>
+<p><br><br><br><br></p>
+<hr>
+
+<p> <strong>이전 포스트 : <a href="https://nayoungkim0918.github.io/2018/11/07/Do-It/Do-It-04-5/">04-5. Mission!</a></strong></p>
+<hr>
+
+<p><strong>다음 포스트 : <a href="https://nayoungkim0918.github.io/2018">05-2. 함수에서 return문의 역할</a></strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://nayoungkim0918.github.io/2018/11/08/Do-It/Do-It-05-1/" data-id="cjo7w75ar001q4kv7gmn2z7cz" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>Follow:</p>        
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/nayoungkim0918" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/watch?v=KITALm0-NTc" target="_blank" rel="noopener">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/11/07/Do-It/Do-It-04-5/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">before</strong>
+        <p class="article-nav-title">[Do It!] 04-5. Mission!</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">32</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/1장-JS-시작하기/">1장. JS 시작하기</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/2장-JS-기초문법/">2장. JS 기초문법</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/3장-제어문/">3장. 제어문</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/4장-객체/">4장. 객체</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/5장-함수/">5장. 함수</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/">Follow Me</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/2장-HTML/">2장. HTML</a><span class="category-list-count">9</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/11/08/Do-It/Do-It-05-1/" class="title">[Do It!] 05-1. 함수</a></p>
+                            <p class="item-date"><time datetime="2018-11-07T23:22:12.000Z" itemprop="datePublished">2018-11-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/11/07/Do-It/Do-It-04-5/" class="title">[Do It!] 04-5. Mission!</a></p>
+                            <p class="item-date"><time datetime="2018-11-07T14:23:53.000Z" itemprop="datePublished">2018-11-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Do-It/">Do It</a></p>
+                            <p class="item-title"><a href="/2018/11/07/Do-It/Do-It-04-4/" class="title">[Do It!] 04-4. 총정리 실습! 브라우저 객체 모델을 사용해 운영체제와 스크린 정보 얻기</a></p>
+                            <p class="item-date"><time datetime="2018-11-07T12:23:41.000Z" itemprop="datePublished">2018-11-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/11/06/FolllowMe/FM-JWP-02-9/" class="title">[Follow Me!] 02-9. 총 정리</a></p>
+                            <p class="item-date"><time datetime="2018-11-05T16:13:42.000Z" itemprop="datePublished">2018-11-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Book/Follow-Me/">Follow Me</a></p>
+                            <p class="item-title"><a href="/2018/11/05/FolllowMe/FM-JWP-02-8/" class="title">[Follow Me!] 02-8. iframe</a></p>
+                            <p class="item-date"><time datetime="2018-11-05T07:43:20.000Z" itemprop="datePublished">2018-11-05</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">기록 보관소</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 18.89px;">Do_It</a> <a href="/tags/Follow-Me/" style="font-size: 15.56px;">Follow Me</a> <a href="/tags/Follow-Me-시리즈/" style="font-size: 10px;">Follow Me 시리즈</a> <a href="/tags/Follow-Me-초급-중급자를-위한-Java-Web-Programming/" style="font-size: 10px;">Follow Me! 초급.중급자를 위한 Java Web Programming</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/HTML/" style="font-size: 14.44px;">HTML</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Mission/" style="font-size: 12.22px;">Mission</a> <a href="/tags/Web-Programming/" style="font-size: 16.67px;">Web Programming</a> <a href="/tags/break/" style="font-size: 10px;">break</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/continue/" style="font-size: 10px;">continue</a> <a href="/tags/do-while/" style="font-size: 10px;">do while</a> <a href="/tags/else/" style="font-size: 10px;">else</a> <a href="/tags/else-if/" style="font-size: 10px;">else if</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 17.78px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12.22px;">start</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/while/" style="font-size: 10px;">while</a> <a href="/tags/객체/" style="font-size: 11.11px;">객체</a> <a href="/tags/김유진/" style="font-size: 10px;">김유진</a> <a href="/tags/내장-객체/" style="font-size: 10px;">내장 객체</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/선택문/" style="font-size: 10px;">선택문</a> <a href="/tags/아티오-ArtStudio/" style="font-size: 10px;">아티오-ArtStudio</a> <a href="/tags/연산자/" style="font-size: 10px;">연산자</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 11.11px;">저자</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/제어문/" style="font-size: 13.33px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/중첩-for/" style="font-size: 10px;">중첩 for</a> <a href="/tags/중첩-if/" style="font-size: 10px;">중첩 if</a> <a href="/tags/총-정리-실습/" style="font-size: 10px;">총 정리 실습</a> <a href="/tags/출판/" style="font-size: 11.11px;">출판</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">링크</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://google.com">Google</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://naver.com">Naver</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit" style="padding: 10px;">
+                <div class="logo-wrap" style="width: 50%; float: left;">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div style="width: 50%; float: left; padding-top: 20px;">
+                    <p>&copy; 2018 Nayoung kim</p>
+                    <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+                </div>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://nayoungkim0918.github.io/2018/11/08/Do-It/Do-It-05-1/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
