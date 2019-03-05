@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (5) - Annotation으로 MVC | Eunoia Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Project,eGovFramework,전자정부프레임워크,DB 연동,MySQL,MySQL Workbench,MyBatis" />
+    
+    <meta name="description" content="04. eGovFrame 프로젝트에 DB 연동하기 (5)04-5. Annotation을 이용해 업무폴더 별 MVC 작업하기1. Annotation 이란?2. MVC패턴 이란?3. 업무폴더 생성4. Controller5. Service6. ServiceImpl7. Mapper 1. Annotation 이란?1) 정의 @를 이용한 주석 자바코드에 주석을 달아">
+<meta name="keywords" content="Project,eGovFramework,전자정부프레임워크,DB 연동,MySQL,MySQL Workbench,MyBatis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (5) - Annotation으로 MVC">
+<meta property="og:url" content="http://nayoungkim0918.github.io/2019/03/06/Project/PJ-WEB-eGov-04_5/index.html">
+<meta property="og:site_name" content="Eunoia Blog">
+<meta property="og:description" content="04. eGovFrame 프로젝트에 DB 연동하기 (5)04-5. Annotation을 이용해 업무폴더 별 MVC 작업하기1. Annotation 이란?2. MVC패턴 이란?3. 업무폴더 생성4. Controller5. Service6. ServiceImpl7. Mapper 1. Annotation 이란?1) 정의 @를 이용한 주석 자바코드에 주석을 달아">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://user-images.githubusercontent.com/24776203/53830089-06668500-3fc5-11e9-9471-203844888655.png">
+<meta property="og:updated_time" content="2019-03-06T10:06:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (5) - Annotation으로 MVC">
+<meta name="twitter:description" content="04. eGovFrame 프로젝트에 DB 연동하기 (5)04-5. Annotation을 이용해 업무폴더 별 MVC 작업하기1. Annotation 이란?2. MVC패턴 이란?3. 업무폴더 생성4. Controller5. Service6. ServiceImpl7. Mapper 1. Annotation 이란?1) 정의 @를 이용한 주석 자바코드에 주석을 달아">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/24776203/53830089-06668500-3fc5-11e9-9471-203844888655.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Eunoia Blog" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Study &amp; Programming for Web Programmer</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">eunoia♥</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/categories/index.html">Category</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/tags/index.html">Tag</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="검색" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '포스트',
+            PAGES: 'Pages',
+            CATEGORIES: '카테고리',
+            TAGS: '태그',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Project/eGovFramework/">eGovFramework</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Project/eGovFramework/게시판-CRUD/">게시판 CRUD</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Project/PJ-WEB-eGov-04_5" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        [PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (5) - Annotation으로 MVC
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/03/06/Project/PJ-WEB-eGov-04_5/" class="article-date">
+            <time datetime="2019-03-06T10:06:55.000Z" itemprop="datePublished">2019-03-06</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/DB-연동/">DB 연동</a>, <a class="tag-link" href="/tags/MyBatis/">MyBatis</a>, <a class="tag-link" href="/tags/MySQL/">MySQL</a>, <a class="tag-link" href="/tags/MySQL-Workbench/">MySQL Workbench</a>, <a class="tag-link" href="/tags/Project/">Project</a>, <a class="tag-link" href="/tags/eGovFramework/">eGovFramework</a>, <a class="tag-link" href="/tags/전자정부프레임워크/">전자정부프레임워크</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="04-eGovFrame-프로젝트에-DB-연동하기-5"><a href="#04-eGovFrame-프로젝트에-DB-연동하기-5" class="headerlink" title="04. eGovFrame 프로젝트에 DB 연동하기 (5)"></a>04. eGovFrame 프로젝트에 DB 연동하기 (5)</h1><h2 id="04-5-Annotation을-이용해-업무폴더-별-MVC-작업하기"><a href="#04-5-Annotation을-이용해-업무폴더-별-MVC-작업하기" class="headerlink" title="04-5. Annotation을 이용해 업무폴더 별 MVC 작업하기"></a>04-5. Annotation을 이용해 업무폴더 별 MVC 작업하기</h2><h5 id="1-Annotation-이란"><a href="#1-Annotation-이란" class="headerlink" title="1. Annotation 이란?"></a>1. Annotation 이란?</h5><h5 id="2-MVC패턴-이란"><a href="#2-MVC패턴-이란" class="headerlink" title="2. MVC패턴 이란?"></a>2. MVC패턴 이란?</h5><h5 id="3-업무폴더-생성"><a href="#3-업무폴더-생성" class="headerlink" title="3. 업무폴더 생성"></a>3. 업무폴더 생성</h5><h5 id="4-Controller"><a href="#4-Controller" class="headerlink" title="4. Controller"></a>4. Controller</h5><h5 id="5-Service"><a href="#5-Service" class="headerlink" title="5. Service"></a>5. Service</h5><h5 id="6-ServiceImpl"><a href="#6-ServiceImpl" class="headerlink" title="6. ServiceImpl"></a>6. ServiceImpl</h5><h5 id="7-Mapper"><a href="#7-Mapper" class="headerlink" title="7. Mapper"></a>7. Mapper</h5><p><hr><br><br><br><br></p>
+<h4 id="1-Annotation-이란-1"><a href="#1-Annotation-이란-1" class="headerlink" title="1. Annotation 이란?"></a>1. Annotation 이란?</h4><h5 id="1-정의"><a href="#1-정의" class="headerlink" title="1) 정의"></a>1) 정의</h5><ul>
+<li>@를 이용한 주석</li>
+<li>자바코드에 주석을 달아 특별한 의미를 부여한 것</li>
+<li>컴파일러가 특정 오류를 억제하도록 지시하는 것과 동일한 기능</li>
+<li>프로그램 코드의 일부가 아닌 프로그램에 관한 데이터를 제공</li>
+<li>코드에 정보를 추가하는 정형화된 기법<br><br></li>
+</ul>
+<h5 id="2-용도"><a href="#2-용도" class="headerlink" title="2) 용도"></a>2) 용도</h5><ul>
+<li>컴파일러를 위한 정보를 제공하기 위한 용도<ul>
+<li>@Override</li>
+</ul>
+</li>
+<li>런타임의 리플렉션을 이용해 특수 기능을 추가하기 위한 용도<ul>
+<li>@Controller</li>
+<li>자바 리플렉션 : 다른 언어에는 존재하지 않는 기능. 컴파일 시간이 아닌 실행시간에 동적으로 특정 클래스의 정보를 객체를 통해 분석 및 추출해내는 프로그래밍 기법</li>
+</ul>
+</li>
+<li>컴파일 과정에서 어노테이션 정보로부터 코드를 생성하기 위한 용도<br><br>  </li>
+</ul>
+<h5 id="3-기본-어노테이션-JDK에서-제공"><a href="#3-기본-어노테이션-JDK에서-제공" class="headerlink" title="3) 기본 어노테이션(JDK에서 제공)"></a>3) 기본 어노테이션(JDK에서 제공)</h5><ul>
+<li>@Override : 해당 메소드가 부모 클래스에 있는 메소드를 제정의했다는 것을 명시적으로 선언</li>
+<li>@deprecated : 더 이상 사용되지 않는 클래스나 메소드 앞에 추가</li>
+<li>@SuppressWarnings : 프로그램에 문제가 없음에도 컴파일러가 Warnning을 띄울 경우, 프로그래머에게 무시하라고 알림<br><br></li>
+</ul>
+<h5 id="4-어노테이션-사용법"><a href="#4-어노테이션-사용법" class="headerlink" title="4) 어노테이션 사용법"></a>4) 어노테이션 사용법</h5><ul>
+<li><p>메소드, 필드 등 어디에서나 사용 가능</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//엘리먼트가 여러개인 경우</span></span><br><span class="line">@어노테이션(엘리먼트<span class="number">1</span>=값<span class="number">1</span>, 엘리먼트<span class="number">2</span>=<span class="string">"값2"</span>) </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 클래스명 </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//엘리먼트가 1개인 경우</span></span><br><span class="line">@어노테이션(값)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 클래스명 </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="2-MVC패턴-이란-1"><a href="#2-MVC패턴-이란-1" class="headerlink" title="2. MVC패턴 이란?"></a>2. MVC패턴 이란?</h4><h5 id="1-정의-1"><a href="#1-정의-1" class="headerlink" title="1) 정의"></a>1) 정의</h5><ul>
+<li><strong>Model, View, Controller</strong> 의 약자</li>
+<li>소프트웨어 공학에서 사용되는 소프트웨어 디자인패턴</li>
+<li><strong>디자인패턴</strong> : 프로그램을 개발하는 중에 발생했던 문제점들을 정리하여 상황에 따라 간편하게 적용해서 쓸 수 있는 것을 정리해 쉽게 쓸 수 있는 형태로 만든 <strong>“규약”</strong></li>
+<li><strong>Model</strong> : 백그라운드에서 동작하는 로직을 처리, 웹페이지에 필요한 기능(Java 소스)</li>
+<li><strong>View</strong> : 사용자가 보게 될 결과 화면을 출력, 실질적으로 보여지는 페이지(JSP)</li>
+<li><strong>Controller</strong> : 사용자의 입력처리와 흐름 제어를 담당, View와 Model을 연결시켜주는 역할</li>
+<li>Model1 : JSP에서 출력과 로직을 전부 처리</li>
+<li>Model2 : JSP에서 출력만 처리<br><br></li>
+</ul>
+<h5 id="2-Model-1"><a href="#2-Model-1" class="headerlink" title="2) Model 1"></a>2) Model 1</h5><ul>
+<li>JSP가 사용자의 요청을 전부 다 처리</li>
+<li>웹 브라우저 사용자의 요청을 받은 JSP는 JavaBean이나 Service클래스를 사용해 웹브라우저가 요청한 적업을 처리하고 그 결과를 출력<br><img src="https://user-images.githubusercontent.com/24776203/53830089-06668500-3fc5-11e9-9471-203844888655.png" alt="[그림4-5-2 : 1]"><br><br></li>
+</ul>
+<h5 id="3-Model-2"><a href="#3-Model-2" class="headerlink" title="3) Model 2"></a>3) Model 2</h5><ul>
+<li>웹브라우저 사용자의 요청을 서블릿이 받음</li>
+<li>서블릿은 웹브라우저의 요청을 받아 View로 보여줄 것인지 Model로 보내줄 것인지 정하여 전송</li>
+<li>View페이지는 사용자에게 보여주는 역할만 담당하고, 실질적인 기능의 부분은 Model에서 담당</li>
+<li><p>실질적으로 보여지는 HTML과 JAVA 소스를 분리해 놓았기 때문에 모델1 방식에 비해 개발확장과 유지보수에 용이</p>
+<p><img src="https://user-images.githubusercontent.com/24776203/53830094-08c8df00-3fc5-11e9-9798-eb63f9fb3eb8.png" alt="[그림4-5-2 : 2]"><br><br><br></p>
+</li>
+</ul>
+<h4 id="3-업무폴더-생성-1"><a href="#3-업무폴더-생성-1" class="headerlink" title="3. 업무폴더 생성"></a>3. 업무폴더 생성</h4><ul>
+<li><strong>java</strong> 와 <strong>jsp</strong> 양 쪽에 생성해야 한다.</li>
+<li><strong>java/egovframework/example</strong></li>
+<li><strong>webapp/WEB-INF/jsp/egovframework/example</strong></li>
+<li>업무폴더는 관련 페이지들을 기준으로 나누는 것이 좋다.</li>
+<li>개인적으로 Table을 기준으로 나누는 편이다.</li>
+<li>MySQL에 생성한 Table이 member와 drama이므로 각각의 업무폴더를 생성한다.</li>
+<li><p><strong>Controller - Service - ServiceImpl - Mapper</strong> </p>
+<p><img src="https://user-images.githubusercontent.com/24776203/53831758-e5079800-3fc8-11e9-887d-78f2cb24de2f.png" alt="[그림4-5-3 : 1]"> </p>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="4-Controller-1"><a href="#4-Controller-1" class="headerlink" title="4. Controller"></a>4. Controller</h4><ul>
+<li>java/egovframework/example/업무폴더/web</li>
+<li><p><strong>주의</strong> : Contoller - Service - ServiceImpl - Mapper 순으로 연결되므로, 클래스명, 변수명, 메서드명은 계속 일치해야한다.</p>
+<figure class="highlight java"><figcaption><span>업무폴더명Controller.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> egovframework.example.업무폴더.web;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 업무폴더명<span class="title">Controller</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span>(name = <span class="string">"Service명"</span>)</span><br><span class="line">    <span class="keyword">private</span> 업무폴더명Service Service명;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"rawtypes"</span>)</span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"jsp업무폴더파일.do"</span>)</span><br><span class="line">    <span class="keyword">public</span> String 메서드명(ModelMap model) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">      </span><br><span class="line">      List&lt;Map&gt; List객체명 = Service명.xml파일쿼리문id();</span><br><span class="line">      </span><br><span class="line">      model.addAttribute(<span class="string">"jsp에서List객체에접근할이름"</span>, List객체명);</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">return</span> <span class="string">"업무폴더명/jsp업무폴더파일.tiles"</span>;		</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="5-Service-1"><a href="#5-Service-1" class="headerlink" title="5. Service"></a>5. Service</h4><ul>
+<li><p>java/egovframework/example/업무폴더/service</p>
+<figure class="highlight java"><figcaption><span>업무폴더명Service.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> egovframework.example.업무폴더.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> 업무폴더<span class="title">Service</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@SuppressWarnings</span>(<span class="string">"rawtypes"</span>)</span><br><span class="line">  List&lt;Map&gt; xml파일쿼리문id() <span class="keyword">throws</span> Exception;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="6-ServiceImpl-1"><a href="#6-ServiceImpl-1" class="headerlink" title="6. ServiceImpl"></a>6. ServiceImpl</h4><ul>
+<li><p>java/egovframework/example/업무폴더/service/impl</p>
+<figure class="highlight java"><figcaption><span>업무폴더명ServiceImpl.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> egovframework.example.업무폴더.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span>(<span class="string">"Service명"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 업무폴더<span class="title">ServiceImpl</span> <span class="keyword">implements</span> 업무폴더<span class="title">Service</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Resource</span>(name=<span class="string">"Mapper명"</span>)</span><br><span class="line">  <span class="keyword">private</span> 업무폴더Mapper Mapper명;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@SuppressWarnings</span>(<span class="string">"rawtypes"</span>)</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">public</span> List&lt;Map&gt; xml파일쿼리문id() <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="keyword">return</span> Mapper명.xml파일쿼리문id();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="7-Mapper-1"><a href="#7-Mapper-1" class="headerlink" title="7. Mapper"></a>7. Mapper</h4><ul>
+<li><p>java/egovframework/example/업무폴더/service/impl</p>
+<figure class="highlight java"><figcaption><span>업무폴더명Mapper.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> egovframework.example.업무폴더.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Mapper</span>(<span class="string">"Mapper명"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> 업무폴더<span class="title">Mapper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@SuppressWarnings</span>(<span class="string">"rawtypes"</span>)</span><br><span class="line">  List&lt;Map&gt; xml파일쿼리문id() <span class="keyword">throws</span> Exception;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br><br><br><br><br><br></p>
+<hr>
+
+
+<p> <strong>다음 포스트 : <a href="https://nayoungkim0918.github.io/2019/03/10/Project/PJ-WEB-eGov-04_6/">04. eGovFrame 프로젝트에 DB 연동하기 (6) - MyBatis로 프로젝트에 연동</a></strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://nayoungkim0918.github.io/2019/03/06/Project/PJ-WEB-eGov-04_5/" data-id="cjswd0ymg003brov7d28vgo7y" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>Follow:</p>        
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/nayoungkim0918" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/watch?v=KITALm0-NTc" target="_blank" rel="noopener">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>        
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/03/10/Project/PJ-WEB-eGov-04-6/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">after</strong>
+        <p class="article-nav-title">
+        
+            [PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (6) - MyBatis로 프로젝트에 연동
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/03/03/Project/PJ-WEB-eGov-04_4/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">before</strong>
+        <p class="article-nav-title">[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (4) - Eclipse에서 MySQL 사용</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">카테고리</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">35</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/">Do It</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/">자바스크립트 + 제이쿼리 입문</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/">Javascript</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/1장-JS-시작하기/">1장. JS 시작하기</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/2장-JS-기초문법/">2장. JS 기초문법</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/3장-제어문/">3장. 제어문</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/4장-객체/">4장. 객체</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Do-It/자바스크립트-제이쿼리-입문/Javascript/5장-함수/">5장. 함수</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/">Follow Me</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/">Java Web Programming</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/2장-HTML/">2장. HTML</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Follow-Me/Java-Web-Programming/3장-CSS/">3장. CSS</a><span class="category-list-count">2</span></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/">Setting</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/퀵스타트/">퀵스타트</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/Setting/테마/">테마</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Project/">Project</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Project/eGovFramework/">eGovFramework</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Project/eGovFramework/게시판-CRUD/">게시판 CRUD</a><span class="category-list-count">9</span></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">최근 글</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/eGovFramework/">eGovFramework</a></p>
+                            <p class="item-title"><a href="/2019/03/10/Project/PJ-WEB-eGov-04-6/" class="title">[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (6) - MyBatis로 프로젝트에 연동</a></p>
+                            <p class="item-date"><time datetime="2019-03-10T10:06:55.000Z" itemprop="datePublished">2019-03-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/eGovFramework/">eGovFramework</a></p>
+                            <p class="item-title"><a href="/2019/03/06/Project/PJ-WEB-eGov-04_5/" class="title">[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (5) - Annotation으로 MVC</a></p>
+                            <p class="item-date"><time datetime="2019-03-06T10:06:55.000Z" itemprop="datePublished">2019-03-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/eGovFramework/">eGovFramework</a></p>
+                            <p class="item-title"><a href="/2019/03/03/Project/PJ-WEB-eGov-04_4/" class="title">[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (4) - Eclipse에서 MySQL 사용</a></p>
+                            <p class="item-date"><time datetime="2019-03-03T10:06:55.000Z" itemprop="datePublished">2019-03-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/eGovFramework/">eGovFramework</a></p>
+                            <p class="item-title"><a href="/2019/03/01/Project/PJ-WEB-eGov-04_3/" class="title">[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (3) - Eclipse 연결</a></p>
+                            <p class="item-date"><time datetime="2019-03-01T10:06:55.000Z" itemprop="datePublished">2019-03-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Project/">Project</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Project/eGovFramework/">eGovFramework</a></p>
+                            <p class="item-title"><a href="/2019/02/25/Project/PJ-WEB-eGov-04_2/" class="title">[PJ-eGov] 04. eGovFrame 프로젝트에 DB 연동하기 (2) - MySQL Workbench</a></p>
+                            <p class="item-date"><time datetime="2019-02-25T10:06:55.000Z" itemprop="datePublished">2019-02-25</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">기록 보관소</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">3월 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2월 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">11월 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">10월 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">9월 2018</a><span class="archive-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">태그 클라우드</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 11px;">CSS</a> <a href="/tags/DB-연동/" style="font-size: 14px;">DB 연동</a> <a href="/tags/DoIt-자바스크립트-제이쿼리입문/" style="font-size: 10px;">DoIt!_자바스크립트+제이쿼리입문</a> <a href="/tags/DoIt시리즈/" style="font-size: 10px;">DoIt시리즈</a> <a href="/tags/Do-It/" style="font-size: 19px;">Do_It</a> <a href="/tags/Follow-Me/" style="font-size: 16px;">Follow Me</a> <a href="/tags/Follow-Me-시리즈/" style="font-size: 10px;">Follow Me 시리즈</a> <a href="/tags/Follow-Me-초급-중급자를-위한-Java-Web-Programming/" style="font-size: 10px;">Follow Me! 초급.중급자를 위한 Java Web Programming</a> <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/Java/" style="font-size: 17px;">Java</a> <a href="/tags/Mission/" style="font-size: 12px;">Mission</a> <a href="/tags/MyBatis/" style="font-size: 11px;">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 14px;">MySQL</a> <a href="/tags/MySQL-Workbench/" style="font-size: 14px;">MySQL Workbench</a> <a href="/tags/Project/" style="font-size: 15px;">Project</a> <a href="/tags/Web-Programming/" style="font-size: 17px;">Web Programming</a> <a href="/tags/break/" style="font-size: 10px;">break</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/continue/" style="font-size: 10px;">continue</a> <a href="/tags/do-while/" style="font-size: 10px;">do while</a> <a href="/tags/eGovFramework/" style="font-size: 15px;">eGovFramework</a> <a href="/tags/else/" style="font-size: 10px;">else</a> <a href="/tags/else-if/" style="font-size: 10px;">else if</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 18px;">html</a> <a href="/tags/hueman/" style="font-size: 10px;">hueman</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/start/" style="font-size: 12px;">start</a> <a href="/tags/switch/" style="font-size: 10px;">switch</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/undefined/" style="font-size: 10px;">undefined</a> <a href="/tags/visual-studio-code/" style="font-size: 10px;">visual studio code</a> <a href="/tags/while/" style="font-size: 10px;">while</a> <a href="/tags/객체/" style="font-size: 12px;">객체</a> <a href="/tags/김유진/" style="font-size: 10px;">김유진</a> <a href="/tags/내장-객체/" style="font-size: 10px;">내장 객체</a> <a href="/tags/반복문/" style="font-size: 10px;">반복문</a> <a href="/tags/변수/" style="font-size: 10px;">변수</a> <a href="/tags/브라우저-객체-모델/" style="font-size: 10px;">브라우저 객체 모델</a> <a href="/tags/선택문/" style="font-size: 10px;">선택문</a> <a href="/tags/아티오-ArtStudio/" style="font-size: 10px;">아티오-ArtStudio</a> <a href="/tags/연산자/" style="font-size: 10px;">연산자</a> <a href="/tags/외부-스크립트-연동/" style="font-size: 10px;">외부 스크립트 연동</a> <a href="/tags/이지스퍼블리싱/" style="font-size: 10px;">이지스퍼블리싱</a> <a href="/tags/저자/" style="font-size: 11px;">저자</a> <a href="/tags/전자정부프레임워크/" style="font-size: 15px;">전자정부프레임워크</a> <a href="/tags/정인용/" style="font-size: 10px;">정인용</a> <a href="/tags/제어문/" style="font-size: 13px;">제어문</a> <a href="/tags/조건문/" style="font-size: 10px;">조건문</a> <a href="/tags/주석/" style="font-size: 10px;">주석</a> <a href="/tags/중첩-for/" style="font-size: 10px;">중첩 for</a> <a href="/tags/중첩-if/" style="font-size: 10px;">중첩 if</a> <a href="/tags/총-정리-실습/" style="font-size: 10px;">총 정리 실습</a> <a href="/tags/출판/" style="font-size: 11px;">출판</a> <a href="/tags/함수/" style="font-size: 10px;">함수</a> <a href="/tags/환경설정/" style="font-size: 10px;">환경설정</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">링크</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://google.com">Google</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://naver.com">Naver</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit" style="padding: 10px;">
+                <div class="logo-wrap" style="width: 50%; float: left;">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div style="width: 50%; float: left; padding-top: 20px;">
+                    <p>&copy; 2019 Nayoung kim</p>
+                    <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+                </div>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://nayoungkim0918.github.io/2019/03/06/Project/PJ-WEB-eGov-04_5/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
